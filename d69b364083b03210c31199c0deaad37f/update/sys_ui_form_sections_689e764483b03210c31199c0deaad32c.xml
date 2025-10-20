@@ -28,6 +28,20 @@
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2025-10-20 13:40:52</sys_updated_on>
         </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-20 14:47:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>37ddcb0883f03210c31199c0deaad35c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1836478_cloud_0_branch" name="x_1836478_cloud_0_branch" sys_domain="global" view="Default view">689e764483b03210c31199c0deaad32c</sys_ui_form>
+            <sys_ui_section caption="Integration Properties" display_value="Integration Properties" name="x_1836478_cloud_0_branch" sys_domain="global" view="Default view">23dd8b0883f03210c31199c0deaad3c4</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-20 14:47:41</sys_updated_on>
+        </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_1836478_cloud_0_branch</name>
             <roles/>

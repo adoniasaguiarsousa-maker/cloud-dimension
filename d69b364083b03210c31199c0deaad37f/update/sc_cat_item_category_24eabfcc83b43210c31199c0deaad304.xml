@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Cloud Dimensions Allocator">4506bfc483b43210c31199c0deaad3ae</sc_cat_item>
+        <sc_category display_value="Cloud Dimensions Allocator">2bb9b78c83b43210c31199c0deaad34b</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-20 18:04:21</sys_created_on>
+        <sys_id>24eabfcc83b43210c31199c0deaad304</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Cloud Dimensions Allocator.Cloud Dimensions Allocator</sys_name>
+        <sys_package display_value="Cloud Dimension Allocator" source="x_1836478_cloud_0">d69b364083b03210c31199c0deaad37f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name>sc_cat_item_category_24eabfcc83b43210c31199c0deaad304</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-20 18:04:21</sys_updated_on>
+    </sc_cat_item_category>
+</record_update>

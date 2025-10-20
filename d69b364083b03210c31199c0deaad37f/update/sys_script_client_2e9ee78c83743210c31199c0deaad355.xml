@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Checks if the name of branch already exists</description>
+        <field>name</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Branch Name Validation</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    var currentSysId = g_form.getUniqueValue();
+
+    var ga = new GlideAjax('BranchUtils');
+    ga.addParam('sysparm_name', 'checkDuplicateName');
+    ga.addParam('sysparm_branch_name', newValue);
+    ga.addParam('sysparm_current', currentSysId);
+
+    ga.getXMLAnswer(function(response) {
+        if (response === 'true') {
+            alert('A branch with this name already exists.');
+            g_form.clearValue('name');
+        }
+    });
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-20 17:19:12</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2e9ee78c83743210c31199c0deaad355</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Branch Name Validation</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Cloud Dimension Allocator" source="x_1836478_cloud_0">d69b364083b03210c31199c0deaad37f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name>sys_script_client_2e9ee78c83743210c31199c0deaad355</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-20 17:22:39</sys_updated_on>
+        <table>x_1836478_cloud_0_branch</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

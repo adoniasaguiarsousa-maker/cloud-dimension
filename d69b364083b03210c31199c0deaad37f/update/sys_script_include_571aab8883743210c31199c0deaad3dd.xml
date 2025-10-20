@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1836478_cloud_0.BranchUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Functions related to the Branch table.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>BranchUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var BranchUtils = Class.create();
+BranchUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    checkManagerExists: function() {
+        var managerSysId = this.getParameter('sysparm_manager');
+        var currentSysId = this.getParameter('sysparm_current');
+
+        if (!managerSysId) {
+            return false;
+        }
+
+        var branchGR = new GlideRecord('x_1836478_cloud_0_branch');
+        branchGR.addQuery('branch_manager', managerSysId);
+
+        // Ignorando o registro atual
+        if (currentSysId) {
+            branchGR.addQuery('sys_id', '!=', currentSysId);
+        }
+
+        branchGR.query();
+
+        return branchGR.hasNext().toString();
+    },
+
+    checkDuplicateName: function() {
+        var name = this.getParameter('sysparm_branch_name');
+        var currentSysId = this.getParameter('sysparm_current');
+
+        if (!name) {
+            return false;
+        }
+
+        var gr = new GlideRecord('x_1836478_cloud_0_branch');
+        gr.addQuery('name', name);
+        if (currentSysId) {
+            gr.addQuery('sys_id', '!=', currentSysId);
+        }
+        gr.query();
+
+        return gr.hasNext().toString();
+    },
+
+    checkDuplicateLocation: function() {
+        var city = this.getParameter('sysparm_city');
+        var state = this.getParameter('sysparm_state');
+        var currentSysId = this.getParameter('sysparm_current');
+
+        if (!city || !state) {
+            return false;
+        }
+
+        var gr = new GlideRecord('x_1836478_cloud_0_branch');
+        gr.addQuery('city', city);
+        gr.addQuery('state', state);
+        if (currentSysId) {
+            gr.addQuery('sys_id', '!=', currentSysId);
+        }
+        gr.query();
+
+        return gr.hasNext().toString();
+    },
+
+    type: 'BranchUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-20 16:53:37</sys_created_on>
+        <sys_id>571aab8883743210c31199c0deaad3dd</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>BranchUtils</sys_name>
+        <sys_package display_value="Cloud Dimension Allocator" source="x_1836478_cloud_0">d69b364083b03210c31199c0deaad37f</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name>sys_script_include_571aab8883743210c31199c0deaad3dd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-20 17:23:10</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>571aab8883743210c31199c0deaad3dd</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-20 16:53:37</sys_created_on>
+        <sys_id>18ba674883743210c31199c0deaad3a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-20 16:53:37</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

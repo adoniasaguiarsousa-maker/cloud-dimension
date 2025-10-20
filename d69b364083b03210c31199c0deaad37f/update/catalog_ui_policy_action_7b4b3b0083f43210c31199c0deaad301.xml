@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="Cloud Dimensions Allocator">4506bfc483b43210c31199c0deaad3ae</catalog_item>
+        <catalog_variable>IO:a608730c83b43210c31199c0deaad3f6</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>true</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-20 18:06:21</sys_created_on>
+        <sys_id>7b4b3b0083f43210c31199c0deaad301</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>base_name</sys_name>
+        <sys_package display_value="Cloud Dimension Allocator" source="x_1836478_cloud_0">d69b364083b03210c31199c0deaad37f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_7b4b3b0083f43210c31199c0deaad301</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-20 18:06:21</sys_updated_on>
+        <table/>
+        <ui_policy display_value="Mandatory fields">3b2b770083f43210c31199c0deaad36e</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <variable>base_name</variable>
+        <variable_set/>
+        <visible>ignore</visible>
+    </catalog_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=7b4b3b0083f43210c31199c0deaad301"/>
+</record_update>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="branch_manager" table="x_1836478_cloud_0_branch">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="integration_active" table="x_1836478_cloud_0_branch">
         <active>true</active>
         <array>false</array>
         <attributes/>
         <audit>false</audit>
         <calculation/>
-        <choice/>
+        <choice>0</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>Branch manager</column_label>
+        <column_label>Integration Active</column_label>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>true</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -21,41 +21,39 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>branch_manager</element>
+        <element>integration_active</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <formula/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="Reference">reference</internal_type>
+        <internal_type display_value="">boolean</internal_type>
         <mandatory>false</mandatory>
-        <max_length>32</max_length>
+        <max_length>40</max_length>
         <name>x_1836478_cloud_0_branch</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
-        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference/>
         <reference_cascade_rule/>
         <reference_floats>false</reference_floats>
         <reference_key/>
-        <reference_qual>roles=x_1836478_cloud_0.cloud_manager^EQ</reference_qual>
-        <reference_qual_condition table="sys_user">roles=x_1836478_cloud_0.cloud_manager^EQ<item endquery="false" field="roles" goto="false" newquery="false" operator="=" or="false" value="x_1836478_cloud_0.cloud_manager"/>
-            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
-        </reference_qual_condition>
+        <reference_qual/>
+        <reference_qual_condition/>
         <reference_type/>
         <spell_check>false</spell_check>
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-20 13:32:52</sys_created_on>
-        <sys_name>Branch manager</sys_name>
+        <sys_created_on>2025-10-20 14:46:42</sys_created_on>
+        <sys_name>Integration Active</sys_name>
         <sys_package display_value="Cloud Dimension Allocator" source="x_1836478_cloud_0">d69b364083b03210c31199c0deaad37f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
-        <sys_update_name>sys_dictionary_x_1836478_cloud_0_branch_branch_manager</sys_update_name>
+        <sys_update_name>sys_dictionary_x_1836478_cloud_0_branch_integration_active</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-20 14:22:09</sys_updated_on>
+        <sys_updated_on>2025-10-20 14:48:37</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
