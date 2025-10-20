@@ -8,7 +8,7 @@
         <choice>0</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>Temperature</column_label>
+        <column_label>Temperature (in Celsius)</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -47,13 +47,13 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-20 13:32:51</sys_created_on>
-        <sys_name>Temperature</sys_name>
+        <sys_name>Temperature (in Celsius)</sys_name>
         <sys_package display_value="Cloud Dimension Allocator" source="x_1836478_cloud_0">d69b364083b03210c31199c0deaad37f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
         <sys_update_name>sys_dictionary_x_1836478_cloud_0_branch_temperature</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-20 13:32:51</sys_updated_on>
+        <sys_updated_on>2025-10-20 19:27:12</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
