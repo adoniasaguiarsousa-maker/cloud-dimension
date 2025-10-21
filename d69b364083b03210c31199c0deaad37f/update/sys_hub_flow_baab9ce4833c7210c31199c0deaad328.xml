@@ -1,0 +1,2198 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=9069000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>1c9b8c6083f87210c31199c0deaad32e</copied_from>
+        <copied_from_name>Allocator Integration</copied_from_name>
+        <description>Latitude, Longitude and Temperature of the company branchs</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>daily_temperature_update_cd_allocator</internal_name>
+        <label_cache>[{"name":"85b63c01-52be-4704-85f8-2c165f6cafa5.Record","label":"1 - Look Up Record➛Branch Record","reference":"x_1836478_cloud_0_branch","reference_display":"Branch","type":"reference","base_type":"reference","usedInstances":{"1b611e54-1c2b-491f-9bd0-3e7d0d44ea1b":["record"],"4425b8a1-9a57-4f25-a3bc-44004f0447e6":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"85b63c01-52be-4704-85f8-2c165f6cafa5.Record.city","label":"1 - Look Up Record➛Branch Record➛City","reference":"","reference_display":"City","type":"string","base_type":"string","parent_table_name":"x_1836478_cloud_0_branch","column_name":"city","usedInstances":{"79572f5e-ab64-4526-837c-bc027f89cb99":["city"]}},{"name":"Created_1.current.city","label":"Trigger - Record Created➛Branch Record➛City","reference":"","reference_display":"City","type":"string","base_type":"string","parent_table_name":"x_1836478_cloud_0_branch","column_name":"city","usedInstances":{}},{"name":"flow_variable.retry_count","label":"Flow Variables➛Retry Count","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","usedInstances":{"4c8a9d72-bbdc-48db-b593-8847e337951e":["condition"],"d74e3c86-caf7-48b7-be70-aca7a6eecbe5":["condition"]},"attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"cf354e43-315b-412b-b80c-fd0b3a240a94"}},{"name":"flow_variable.current_try","label":"Flow Variables➛Current Try","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","usedInstances":{"4c8a9d72-bbdc-48db-b593-8847e337951e":["condition"],"d74e3c86-caf7-48b7-be70-aca7a6eecbe5":["condition"]},"attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"14b1322d-dd41-47c5-ae15-7db84b76e82e"}},{"name":"flow_variable.integration_success","label":"Flow Variables➛Integration Success","reference":"","reference_display":"","type":"boolean","base_type":"boolean","column_name":"","usedInstances":{"4c8a9d72-bbdc-48db-b593-8847e337951e":["condition"],"e2d6343a-e58a-441f-91ff-729f553fd4e3":["condition"]},"attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"3b8b6947-74ad-46f6-aa34-61ca59147076"}},{"name":"flow_variable.active","label":"Flow Variables➛Active","reference":"","reference_display":"","type":"boolean","base_type":"boolean","column_name":"","choices":[],"usedInstances":{"3022f437-8f85-4a65-9022-789087170552":["condition"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"9ec4dabf-c540-447a-8597-109ac14b3450"}},{"name":"Created_1.current","label":"Trigger - Record Created➛Branch Record","reference":"x_1836478_cloud_0_branch","reference_display":"Branch","type":"reference","base_type":"reference","usedInstances":{"95b3e02c-2e7c-4f5a-bcae-37be548b3909":["record"]},"attributes":{}},{"name":"79572f5e-ab64-4526-837c-bc027f89cb99.__action_status__.code","label":"9 - Integration Cloud Dimensions Allocator➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","usedInstances":{"3ab5b356-d932-4863-b6fd-1e619dd9f875":["condition"]},"attributes":{}},{"name":"79572f5e-ab64-4526-837c-bc027f89cb99.__action_status__.message","label":"9 - Integration Cloud Dimensions Allocator➛Action Status➛Message","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"c20397ab-ab43-46f8-b766-ced01bb1bd08":["integration_erro_message-2"]},"attributes":{}},{"name":"flow_variable.retry_timeout","label":"Flow Variables➛Retry Timeout","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","usedInstances":{"b611526f-aac5-424d-8459-21959da20089":["seconds"]},"attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"953a26e5-e1c9-495f-808e-7d2e9cc3d96d"}},{"name":"b611526f-aac5-424d-8459-21959da20089.duration","label":"13 - Cloud Dimensions Convert Seconds➛Duration","reference_display":"Duration","type":"glide_duration","base_type":"glide_duration","usedInstances":{"0516c1ac-c5fa-4869-95a8-d0170fab7960":["timer_duration"]},"attributes":{"uiType":"glide_duration","uiTypeLabel":"Duration","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2891e96d-184a-4a1c-bcb0-0bde1ef9c502"}},{"name":"79572f5e-ab64-4526-837c-bc027f89cb99.latitude","label":"9 - Integration Cloud Dimensions Allocator➛Latitude","reference_display":"Latitude","type":"float","base_type":"float","usedInstances":{"4425b8a1-9a57-4f25-a3bc-44004f0447e6":["latitude"]},"attributes":{"uiType":"float","uiTypeLabel":"Floating Point Number","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"6b9ef811-c12c-45d2-b6e7-af8cc37f3308"}},{"name":"79572f5e-ab64-4526-837c-bc027f89cb99.longitude","label":"9 - Integration Cloud Dimensions Allocator➛Longitude","reference_display":"Longitude","type":"float","base_type":"float","usedInstances":{"4425b8a1-9a57-4f25-a3bc-44004f0447e6":["longitude"]},"attributes":{"uiType":"float","uiTypeLabel":"Floating Point Number","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"3fb05313-f937-4c3a-a74f-723840ce69a4"}},{"name":"79572f5e-ab64-4526-837c-bc027f89cb99.temperature","label":"9 - Integration Cloud Dimensions Allocator➛Temperature","reference_display":"Temperature","type":"integer","base_type":"integer","usedInstances":{"4425b8a1-9a57-4f25-a3bc-44004f0447e6":["temperature"]},"attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7258389a-64fb-4b4b-ae2d-64a8bb616a16"}},{"name":"flow_variable.integration_erro_message","label":"Flow Variables➛Integration Erro Message","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"8063b96e-d757-44f6-a63c-5a79acddede6":["description"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"523f940d-c4be-460b-9c72-a56ad95d3a6b"}},{"name":"168afbeb-e253-4fc8-8be1-e348d977b77f.Records","label":"1 - Look Up Records➛Branch Records","reference":"x_1836478_cloud_0_branch","reference_display":"Branch","type":"records","base_type":"records","usedInstances":{"59c39c13-96ae-470c-850a-3e5bd1088db4":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"168afbeb-e253-4fc8-8be1-e348d977b77f.Table","label":"1 - Look Up Records➛Branch Table","reference":"x_1836478_cloud_0_branch","reference_display":"Branch","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"59c39c13-96ae-470c-850a-3e5bd1088db4.item.city","label":"3 - For Each➛Branch Record➛City","reference":"","reference_display":"City","type":"string","base_type":"string","parent_table_name":"x_1836478_cloud_0_branch","column_name":"city","usedInstances":{"79572f5e-ab64-4526-837c-bc027f89cb99":["city"]}},{"name":"59c39c13-96ae-470c-850a-3e5bd1088db4.item","label":"3 - For Each➛Branch Record","reference":"x_1836478_cloud_0_branch","reference_display":"Branch","type":"reference","base_type":"reference","usedInstances":{"4425b8a1-9a57-4f25-a3bc-44004f0447e6":["record"],"1b611e54-1c2b-491f-9bd0-3e7d0d44ea1b":["record"],"483f1619-0cc0-4082-ae0c-2f114bdd82bc":["record"]},"attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"59c39c13-96ae-470c-850a-3e5bd1088db4.item.state","label":"3 - For Each➛Branch Record➛State","reference":"","reference_display":"State","type":"string","base_type":"string","parent_table_name":"x_1836478_cloud_0_branch","column_name":"state","usedInstances":{"79572f5e-ab64-4526-837c-bc027f89cb99":["city"]}}]</label_cache>
+        <master_snapshot>a77fa4ec837c7210c31199c0deaad307</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Daily Temperature Update CD Allocator</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>0c8fa4ec837c7210c31199c0deaad394</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>baab9ce4833c7210c31199c0deaad328</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Daily Temperature Update CD Allocator</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Cloud Dimension Allocator" source="x_1836478_cloud_0">d69b364083b03210c31199c0deaad37f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name>sys_hub_flow_baab9ce4833c7210c31199c0deaad328</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:17</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=baab9ce4833c7210c31199c0deaad328"/>
+    <sys_variable_value action="delete_multiple" query="document_key=baab9ce4833c7210c31199c0deaad328"/>
+    <sys_flow_timer_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <day_of_month>1</day_of_month>
+        <day_of_week/>
+        <name/>
+        <run_period/>
+        <run_start>2025-10-21 16:32:43</run_start>
+        <sys_class_name>sys_flow_timer_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0c8fa4ec837c7210c31199c0deaad394</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 16:32:43</sys_updated_on>
+        <time>1970-01-01 12:00:00</time>
+        <timer_type>11</timer_type>
+    </sys_flow_timer_trigger>
+    <sys_flow_trigger_auto_script action="delete_multiple" query="name=Trigger:0c8fa4ec837c7210c31199c0deaad394^sys_idNOT INc48fa4ec837c7210c31199c0deaad395"/>
+    <sys_flow_trigger_auto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time/>
+        <max_drift/>
+        <name>Trigger:0c8fa4ec837c7210c31199c0deaad394</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek/>
+        <run_period/>
+        <run_start>2025-10-21 16:32:43</run_start>
+        <run_time>1970-01-01 12:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[sn_flow_trigger.FlowTriggerAPI.fireTimerTrigger('0c8fa4ec837c7210c31199c0deaad394');]]></script>
+        <sys_class_name>sys_flow_trigger_auto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:43</sys_created_on>
+        <sys_id>c48fa4ec837c7210c31199c0deaad395</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 16:32:43</sys_updated_on>
+        <time_zone/>
+        <trigger display_value="">0c8fa4ec837c7210c31199c0deaad394</trigger>
+        <upgrade_safe>true</upgrade_safe>
+    </sys_flow_trigger_auto_script>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=baab9ce4833c7210c31199c0deaad328"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=baab9ce4833c7210c31199c0deaad328"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=baab9ce4833c7210c31199c0deaad328^sys_idNOT INfaab9ce4833c7210c31199c0deaad329"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>baab9ce4833c7210c31199c0deaad328</id>
+        <name>Daily Temperature Update CD Allocator</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:04</sys_created_on>
+        <sys_id>faab9ce4833c7210c31199c0deaad329</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 15:06:04</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=faab9ce4833c7210c31199c0deaad329"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=baab9ce4833c7210c31199c0deaad328"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=baab9ce4833c7210c31199c0deaad328"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=baab9ce4833c7210c31199c0deaad328"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=baab9ce4833c7210c31199c0deaad328^sys_idNOT INb94ddc68833c7210c31199c0deaad38d"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment>Vai rodar todo dia as 9</comment>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</flow>
+        <name>Daily</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:13:06</sys_created_on>
+        <sys_id>b94ddc68833c7210c31199c0deaad38d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 16:32:23</sys_updated_on>
+        <trigger_definition display_value="Daily">89142dc0c32222002841b63b12d3ae8a</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/21SXWvcMBD8K0XPFyPfpR/xW6Ec5KENNCEvIZi1tL5bWEuqLF/ihvz3rmz1aEOMXnZ2Z3Zm8cOLYuiQVaPuaEC1UeQSRgd8NwcU9MBksU1rbwBnIfk4qybFCTfKR4tRNbXWG3UCnvB2Hq+t0GTYwZAFCnXpSllffdYXupb3QV81WsuTrjkS24hONQ+PGxUgCjdl5Zc3LcriO7CXaI02u618Wm+/XNbdp11Xb+0OED+K4JtQ/3tJ70T7Nwk+J3QWZVUPPOI7uSOCvXE8nyeOcrY19gDPI/3GIhWxRzFvcG2ey9bSGBjmFTZHTwZvQiLvViRBx4VjPE+D+7EmkNpiDxOn+3JQQaZR9DBkz9lFsdTfHv3Tz78L9+SWgKXJ3gCfK0gpUjclHPPFkXEQoXaAEMgd2hD9iRayeBmq5WxVz/5Jlo50cBWYbLySE0G1F/zbAt9DpJziu8gI+XVJ3/6a8t41R3HcrqFloBxlT8jlJxpNpJC+yoITFruvj38Aa+OqGrUCAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>daily</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=baab9ce4833c7210c31199c0deaad328^sys_idNOT IN03ab9ce4833c7210c31199c0deaad391,0bab9ce4833c7210c31199c0deaad391,47ab9ce4833c7210c31199c0deaad392,4fab9ce4833c7210c31199c0deaad392,bb00e06c833c7210c31199c0deaad3ff,c3ab9ce4833c7210c31199c0deaad38e,c3ab9ce4833c7210c31199c0deaad390"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Cloud Dimensions Convert Seconds">aa14d0ac83f87210c31199c0deaad313</action_type>
+        <action_type_parent display_value="Cloud Dimensions Convert Seconds">bc1450ac83f87210c31199c0deaad36f</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>aa14d0ac83f87210c31199c0deaad313</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</flow>
+        <generation_source/>
+        <order>13</order>
+        <parent_ui_id>d74e3c86-caf7-48b7-be70-aca7a6eecbe5</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:05</sys_created_on>
+        <sys_id>03ab9ce4833c7210c31199c0deaad391</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 15:25:16</sys_updated_on>
+        <ui_id>b611526f-aac5-424d-8459-21959da20089</ui_id>
+        <values>H4sIAAAAAAAA/41SXWvjMBD8L3p2jJ2YNMlb4SgU7q7Q9vpSitlI60QgS6o+0vqC/3tXtmOO5uXepNFod2Z2X89MCrZjCGUlCuCbVbO5WZYFX5XldssLgQBiVa5ZxjS0SEyP3GjhCTiBigk5nxtlPuoTOAl7hbnD4Lo6yBZNDH1PTCG9VdC9TB8I4UephEPNdq9vGbPgqHhAx3bnb0+hs1gr2KOij/c64IFY2X+Lvvx8mlVf2UgdCJBzbeNEUlJmDD8DaoHUqwHlMWMtaAHBuI7tgosEOATxoFU3M45UZ7TYwqeXf6l0VSReg+SJT/bnaz1Fc0nFSI4PNkijRySkRKdHo2Krf4/yU6jYQFThn1Cjp3pok+QkYlLUPB3Nx+Ol4Z3Ug7vpURkOar5BCE7uY0CfBhHl8/doRujn1ThQYUs96xaslfpQW2dOcuhDstv8oOiSD1si0MuDzoEnjzmFCfkd4T8G+GVaoV9UZur3R8v3iPdp3JsC1rCEzYKLqllUy225gIJO+2oltsVaLIubivVDuPV7TLbGmKZA6jFTInjupA23JOGEs/cRTL4vq5GO18y+79++AP+db2M2AwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</flow>
+        <generation_source/>
+        <order>16</order>
+        <parent_ui_id>078b8c01-a92a-4e59-a887-419f6e745619</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:05</sys_created_on>
+        <sys_id>0bab9ce4833c7210c31199c0deaad391</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 15:25:16</sys_updated_on>
+        <ui_id>4425b8a1-9a57-4f25-a3bc-44004f0447e6</ui_id>
+        <values>H4sIAAAAAAAA/+1Uy27bMBD8lUBnS6CelnxrERjooQmQFrmkgUCRq5gA9ShFOXYN/3uXEuU4aZoagYGiQHXbFXdnZjncu50juLNwIuDEz/yEhX4YBoQEaeQXSVj4AQ8pgO/MnJpWgCcVsEZxjNdU9iax28UZCzPmh26WUHCjOWFuGhPqhhAX3CdpyovIExqq/R7ruOhaSbe3thwzbCUkV1A7i7v7mdNShUgalLPYvfilty3kkhYgsfCyYX0Ftb74dIk9TlUxVd9MMl7KMhgYc9s9FyaJvwwfn8wc2GioOSBcSWUHM6eiNae6UVtnoVWPCQWUX9dyezixErUelVZ004kf2D8i5lwJKI3ZKRzC3E5oGk4jGFy3WjT1mNG0kNPkGtlX9dUowcwWStpLfTTbvsN+0BrKhsTIsPyyah5vJrylqAd1lq1sGJWHiGqtRNFr6Mx1gIRhKBVtW1E/5K1q1mIoRiqV9yAx8ErZPCJmJx5qjzLD28MBUW+J+cshfUuVMCI+Yxss3g/i8++9wR1lWML5oHkQnA8XhUc7pkSrP2DjNVia+5m1cRG/ZQCWPd33Uc8nK29yPw2TaJ7mTDY9z0leKFqz1a+u/Tjl3+fdrwb94mpEP5X5s+LfKLHufZaz5o3PZt70L5nXMvrH3Psnz5LgzaV1dNODTbsjv+JKRQZU9wq+9YSEfLebZ/E8KGNwaZFEbhQHiZuGc+YWjATzMs1YkWXeUd1rK/lcbd/5NrCLpBouRjqzk6c0NVgKkLx7ZWzT47AA+doCHLb72V6In5Dh+7/kz7jk738CPuJkFa0IAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</flow>
+        <generation_source/>
+        <order>19</order>
+        <parent_ui_id>e2d6343a-e58a-441f-91ff-729f553fd4e3</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:05</sys_created_on>
+        <sys_id>47ab9ce4833c7210c31199c0deaad392</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 15:25:16</sys_updated_on>
+        <ui_id>8063b96e-d757-44f6-a63c-5a79acddede6</ui_id>
+        <values>H4sIAAAAAAAA/+1V32vbMBD+V4yeTZDjNkvyVjYCfVgLW+lL0xjZOicCWfIkOWkW8r/vJNnprxXKGJTB8nbfnb777ocvdwciOJmTSQb0fJZNqjzL8zGl4+lZVk7yMhvznAGckZQo1gBGOlZKKIKRki2TnQeFqgQH5RDiwraS7W97z+Wjp9oIyQ0oMr+7T0nLDHI4MGR+eOFy+xYKyUqQSHDj8yVXMd97tT57/IZ2n+Ulpg33gmhK4MGB4oD5aiYtpKRhijOnzZ7MnekQMMD4tZL7U8RGYJlzQnzsgxU/kX1KfVwNWFoF0Xcyi75TEa42WlRw3TqhVUSCsN6pZdeoq1iE7zHUrJNu6DEinUU+aL1kL6JXVH/f6N23IeFCqFBd75S6YvJkMeeMKDsH1s8DJDRIVDSsbYVaF63RWxEeo5ZmtJZojGqpd5jUirUascoLH2GH2GiB+JcA3zIjfBVfkQYfH0P1xY/O54119IqLWDQG2MqI1l0g3RZ6ccd0WFIOdPbm4LPycdBhL+2TBbUbbZwXG+hR6rKjNOeXysHaMA8kCyZkZyBNKt1JnijtEgPYlC0kbgOJL231iuAGPU9J6kiS7JhNDofQoW3fhJF4jCvAGF00YC1bw/G4qhi6cLciqdW12zEDK9G02NgI5qvOrHGM+8HE6UkwheAROCyHT29J5kvyWeqOJxe8EWpJ0mVsRPCU2fmYfppOp3lJ83FGsZvZbFZRDozxnJ+H8LB8IdzubYHbZQLsDUz4Pprj62vwfwwfM4Y/PL3QYCEOkji+9N1f4UCwECC5/c1nOdzePkGx7RP09zf7W/c3m9Dw+5grHHX+Y0f4yf/hG+f4/hdW4FkENQgAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Integration Status = Failure</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</flow>
+        <generation_source/>
+        <order>20</order>
+        <parent_ui_id>e2d6343a-e58a-441f-91ff-729f553fd4e3</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:05</sys_created_on>
+        <sys_id>4fab9ce4833c7210c31199c0deaad392</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 15:37:42</sys_updated_on>
+        <ui_id>483f1619-0cc0-4082-ae0c-2f114bdd82bc</ui_id>
+        <values>H4sIAAAAAAAA/+1UUWvbMBD+K8XPjpFjJ3XythECe1gL3ehLV4QsXRKBLHuynCYL+e872XKatlsWSmAM5rc73933fXcfetgFUgTTIAVB4kk85kmcJENChlka5+Mkj4ciYQBxEAaaFYCVBnhpBMZrphqX2O1GE55MeJwMJmMGg/Sa8EE2ImyQwCgXMckykaeRtFDs99gnZF0ptr337ZjhK6mEAR1MHx7DoGIGkSyYYLp79ctuK6CK5aCwcVbypgBtrz7NcMa5Kvruu17Ga1kOA2Php1PpkvjL8YlJGMDGghaAcAumagiDgmnBbGm2wdSaBhMGmLjVanuoWEltO6UF29TyB85PiatbAErjfguHkPoN9cspJYfbyspSdxnLctVvrlRNoW86CW63sGCNske7bWqcB5Wj7Eh0DBdfVuXTXY83l7pV59mqkjN1iJi1RuaNhdqdAxS0SylYVUm9pJUp17JtRipFtFQYRAtVPiFmLZc6YtzxjnBBLJpjftam75mRTsRnHIPN+1Y8/d443E6GJ0xbza1g2h4KS2tuZGU/4OA1eJr70Ns4H50yAJ883/to5rOVNzTOknF6nVGuykZQQnPDNF+9de3HPv8+73516Fc3Hfq5zF80/0aJd++LnDfv6GLmzf6SeT2jf8y9f/IsGZ58tI4u3dq0PvIrngaWhjmStLbMNvW3hpBEJG8Ne6r0nR6GAgEsXHUQ4dlq+gFzCUrUv5DXm9gD0LUHOLzCF3NyPCbt9/8xvuBj/PgTS98ir1UIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment>Look records pra fazer o papel do trigger que tinha antes</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:25:16</sys_created_on>
+        <sys_id>bb00e06c833c7210c31199c0deaad3ff</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 16:32:24</sys_updated_on>
+        <ui_id>168afbeb-e253-4fc8-8be1-e348d977b77f</ui_id>
+        <values>H4sIAAAAAAAA/9WX30/bMBDH/5Uqz1GVkFI63hgMiQfoBBXShJDlOG5rzbUzx+kPEP/7zrGdljZA6boNHnO+833v/DnXvXsMWBYcB71hJ4pwfNg7iqIkiaJuNyE4TtOkS9Io7aRBGAg8oeCpccopfE4xL833HMW9pNs56iHCZZmhCKUKCzIGl4wVOceLW+f51dvJmPFMUREc392HQY4V7KypCo4f15b0IqeI45RyCB+YxK0royLcWvSz4M0iTAL/iYTdWqrMaInCgM41FRmFVEPMCxoGEywyrKVa1BZFcdYXfGkYM6Fhx8A4zwv2ANv3IuM3pFAWoXat/kSuR9ZMxpIR2s81k8JarFC7KHk5EVe2ANNdOsQl1767YCkL2I/mRrMR4RQNb8Zydu0TnjNRlecWuSSY119Ya8XSUtPCnAXldAIboQnOcyZGKFdyyqpg0DJpjzh8tIdcziBpwUaijYkR3oYW4fY52M8q8y1WzFRxCdtAMAhiHE4b2aYXslRVV6bAT1lUC8BJYfcKnqpeoV+lUWmrdvUh2yJwKIhiuT6BgCl1pTyFW3F9GC2RIFJkzOQsVuAmTC8ubq76g2+X3wc/NpHeWN8N7dPV3NvqbgxuKsZB/szmII/3BjnI/U+Ya1V+PMrf4tYW/Aa85OhVCA6X511IpZHt3Aq9m7zuTOg5ozx7dvluIc4H9w1srXTxkl4H6NDkWLuFDz79Lfwh8QRBGbL9ZoIzUf0IgtD9cBu9fnl9WeOgOv4ltZUNF2STXtzSsvWw+y1bnavndwuRPvAGFLUGVmWDcH+/+u0dusne0E0O3ocugHP3WKuvu9bQYP/WMUfn/R+MP173B7pWAuKn+xr9091yxu/NeWByrs1m8q7hXCXLrpy9ANieX1IvDFv4N6d7DKEuH7LDimYsG1G9zO69MqlnmP9sWnd01TNUlffHr7LOq7PXjZdzBjOAFC3gqFafZTE8Njavh7htzbvdDhdC01HVvG0l+shLPG9d1xobhbsrgtU5HNOdPb6//sXPm2984/T4/n+KvyG7Inz/G88BsXcyDwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Integration Status = Off</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>3022f437-8f85-4a65-9022-789087170552</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:05</sys_created_on>
+        <sys_id>c3ab9ce4833c7210c31199c0deaad38e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 15:25:16</sys_updated_on>
+        <ui_id>1b611e54-1c2b-491f-9bd0-3e7d0d44ea1b</ui_id>
+        <values>H4sIAAAAAAAA/+1UUWvbMBD+K8XPjpFjJ3XythECe1gL3ehLV4QsXRKBLHuynCYL+e872XKatlsWSmAM5rc73933fXcfetgFUgTTIAVB4kk85kmcJENChlka5+Mkj4ciYQBxEAaaFYCVBnhpBMZrphqX2O1GE55MeJwMJmMGg/Sa8EE2ImyQwCgXMckykaeRtFDs99gnZF0ptr337ZjhK6mEAR1MHx7DoGIGkSyYYLp79ctuK6CK5aCwcVbypgBtrz7NcMa5Kvruu17Ga1kOA2Php1PpkvjL8YlJGMDGghaAcAumagiDgmnBbGm2wdSaBhMGmLjVanuoWEltO6UF29TyB85PiatbAErjfguHkPoN9cspJYfbyspSdxnLctVvrlRNoW86CW63sGCNske7bWqcB5Wj7Eh0DBdfVuXTXY83l7pV59mqkjN1iJi1RuaNhdqdAxS0SylYVUm9pJUp17JtRipFtFQYRAtVPiFmLZc6YtzxjnBBLJpjftam75mRTsRnHIPN+1Y8/d443E6GJ0xbza1g2h4KS2tuZGU/4OA1eJr70Ns4H50yAJ883/to5rOVNzTOknF6nVGuykZQQnPDNF+9de3HPv8+73516Fc3Hfq5zF80/0aJd++LnDfv6GLmzf6SeT2jf8y9f/IsGZ58tI4u3dq0PvIrngaWhjmStLbMNvW3hpBEpG8Ne6r0nR6GAgEsXHUQ4dlq+gFzCUrUv5DXm9gD0LUHOLzCF3NyPCbt9/8xvuBj/PgTsQbSbFUIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Integration Cloud Dimensions Allocator">9740506883f87210c31199c0deaad30e</action_type>
+        <action_type_parent display_value="Integration Cloud Dimensions Allocator">5ecb406c83b87210c31199c0deaad33d</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9740506883f87210c31199c0deaad30e</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>4c8a9d72-bbdc-48db-b593-8847e337951e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:05</sys_created_on>
+        <sys_id>c3ab9ce4833c7210c31199c0deaad390</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:12</sys_updated_on>
+        <ui_id>79572f5e-ab64-4526-837c-bc027f89cb99</ui_id>
+        <values>H4sIAAAAAAAA/71Sy27bMBD8F54tgbIsm3JORYsABdoESNpcgkBYkSubAEUpFOVENfTvXVqygfiUXnrjzj5mdpbPR6YV27Jks+IZXwuRVmKzTLhMkyTPJVcIoOjNFsxCjVQptR8oOoDpQ3g8ZrlMc5mkUb4GjFYbLiORcYhSzEqVcCFUuYq1xzoOreN48y8tnQeP40iESnetgeHpf/PKvTbKoWXb55cFa8GRDR4d2x6vUn5osTBQoiF5j95pu6P2z7p7bvw62fvR7DCaou48tHEqKEgWDN89WoVEUoHpcMFqsAp84wa29a4nwCGoe2uGS8VeW0/DWKh97/Qfmiw456GyQtpG4pS9hMVs/QTLfaMl3rdeN3ZCPJRm7pGN6Wt7N4kPR8MKeuPPRyOk72getkF0kDFrqh73zdvDmfBW29N+c9I0EswlAk8ulL3HLpyg17+uvJmQH9d3QIM1MRY1tC0hReuagz6xkOg63hkK4so0b6Su0zsbgwwbxmQmxLeEfzvBT+B0WPcnjaHmQPfb6tcev4c7VxzyDebLaL3M6H+BSKKypE+mVoILSITKZcnGk7XFax+Wmkya7SgmR6mgk063/gtJOOC8+fjyF9MaLJCsAwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=baab9ce4833c7210c31199c0deaad328"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=baab9ce4833c7210c31199c0deaad328^sys_idNOT IN03ab9ce4833c7210c31199c0deaad38b,0bab9ce4833c7210c31199c0deaad38c,36ab9ce4833c7210c31199c0deaad386,36ab9ce4833c7210c31199c0deaad389,3aab9ce4833c7210c31199c0deaad387,72ab9ce4833c7210c31199c0deaad382,83ab9ce4833c7210c31199c0deaad38a,87ab9ce4833c7210c31199c0deaad38d,b6ab9ce4833c7210c31199c0deaad385,b6ab9ce4833c7210c31199c0deaad388,f2ab9ce4833c7210c31199c0deaad384,ff00246c833c7210c31199c0deaad302"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">c6c69460833c7210c31199c0deaad312</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
+        <order>14</order>
+        <outputs_assigned/>
+        <parent_ui_id>d74e3c86-caf7-48b7-be70-aca7a6eecbe5</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:05</sys_created_on>
+        <sys_id>03ab9ce4833c7210c31199c0deaad38b</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:13</sys_updated_on>
+        <ui_id>0516c1ac-c5fa-4869-95a8-d0170fab7960</ui_id>
+        <values>H4sIAAAAAAAA/+1YS3PbOAz+Kx6dHa+olx+3TtPO9NDtTuPJpdPRUCRkc0pLWopK6vX4vy9JUbJiy87L6fuUCKCAD8QHCPDGyStZVLKc56/Kki0yZ/bp89BhmZap/zdOhlfgzBxaCSxZnsVyXYAzdG4wr7QcvhacESbj5oDSUVYWHK+v7ZE39sigc4QsGacCrLsCC+VFgnBmmz2VdhdznABXll4vc0a0d0bVUzAd++EEBWPf9ZHvukmEIIqCcZSkER5PQnWuefHSeh7Ma/RHgjJ/ZgqBdZMLqjEh1x2qQCVkFJTjFPMShs4KZxTLXKxbiQBMP2R8J1iyTCp7jj78tWT/KeOBq8+loAIkUOvax9heXC2uUdRJaOLou8pTmbABuNvhzsZH4Ep9A302hNX12EBdG/+AIJBJvOi1UrTaHjveVmWVQoorLl+fL0R0hhC9M4Xo6xDr9H0ojGrm+JpeOOE25yTn1Sr7u6ah017I9amqqo9c3l9cValQQaHpqvlnyZheLfPbjw3X3rLMYLVKnhPM2ycspWBJJXVqNg5wWClD8QoXBcsWcSHyG2ZeVmGsRguuHkYpz2+VU91CRphoICNVHXj0VskvjfgaC6Yv4L0yo17eGuLH/1bab30FFnFsLkwfKIlghXxFdL4sOJ0iW72dHEi2AhGbrhUrt6CfO9k67ElPbkGXyvpf89q86UJJimiEIpSM/chTXcgPSEQgmgIghKee2+lCHUoZwAMDeKABDyziB4dmW5W5fCOPreIFepax9Zim1bL+UaT/WZirEl/GNTVtbMb5GRhd53qX/Jeh8LtMwqKOQxN44vq+705J6I9bAlMKkKbjBHmAegm8o2oPZstN1vr5w8mfnZM9n8DNRg1cKPSi9AJjEl4EXkAvJkE4vfDQNJxS7LnuZDpq3txuDynsDq6A5Bktn96Od7gMmSFFQUiOzYQJ9MyE+1TuhHq3yR7OC99xLvxD5+fQ+WAIjHPlVmetQ3CcSgNlj7SN+BwrDCU4QG54hK5e1KHr3EwMYn+yHXSAPzzEI4uO/8MsOs0l7+eib6FJIM1F91vZCtrd4PTKcY8z9Chn3rOH/5Z3vQN/o92rYymqH7GMG4RkHZ9awDrHLDV3pLuv5u8u8U9uAN94bUCpF9KjlT/2T1T+4brwgJju2xeCX+Bb9swa6P/kDH+72ijJEmjFX6gS2sw0lZAmYaiGtiOVEHl3RzaVgIFcwiDNubpZ/dSBeywMe2+i49rSPjwj7X3vLu3JKuuC6CuBq536dxjrnjq+fdZMrC2VNaUoEFYqh3Mte9f8Wq0Va0UCRrqi21x80VB3su3/wj3lGPcWAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">cac69460833c7210c31199c0deaad313</block>
+        <comment/>
+        <connected_to>3ab5b356-d932-4863-b6fd-1e619dd9f875</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>15</order>
+        <outputs_assigned/>
+        <parent_ui_id>4c8a9d72-bbdc-48db-b593-8847e337951e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:05</sys_created_on>
+        <sys_id>0bab9ce4833c7210c31199c0deaad38c</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:13</sys_updated_on>
+        <ui_id>078b8c01-a92a-4e59-a887-419f6e745619</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">8df39c6c83f87210c31199c0deaad3a5</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Do the following until">eaeb040687210300e6c2c88fc0e3ec89</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <parent_ui_id>59c39c13-96ae-470c-850a-3e5bd1088db4</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:05</sys_created_on>
+        <sys_id>36ab9ce4833c7210c31199c0deaad386</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:12</sys_updated_on>
+        <ui_id>4c8a9d72-bbdc-48db-b593-8847e337951e</ui_id>
+        <values>H4sIAAAAAAAA/+1V22rbQBD9FaFnIWSrjoPfQksg0NYQh/ShTcR6d2QvXe2qe7HjGv17Z3SxgxPTUgJ9qZ88Z25nZuegfWyCr4N3d+bKObnS8ezrQxJLTRj+38eaVRDPYm60kF4aXbRAEm+YCuT4spYKohvtYWUZBUSLwDk4F0kXeRsgMjbiwVrQHu1d9C1kWc6jHGsI6WrFdvdvUIpjrkBHx79mFll6sPFsf+LyuxoKxZagsOPCW6lXmC4FWkvBxnyZvZvmWT7Ks+xiNObjaV7i74JNJxnGDYnvh3VEH1skObsn6oe4GzoZK4jWKMuSGJ48aAHYu2TKQRJXTAvmjd0dEAtMzLU6AmupPdaLKfjJyZ9YfDyZUGAJOCSHznkwi37JHczXRnKY18SwQzxbqj6HGxUq/bkbhJ4HShaUH54HkeCwHtREmlj0lMrF2mxvh4bXUrcT9k5lOFMHi3ncwzJ4cPQyoKDCQkXF6hq3U9TWbGSbjFyqdKXQSEtlttiUjjNlnIinuCOWXiP+oYXvmZU0xScsg8lNO33xI1Dfbo6ecdENjQGOW1n7Kyy3gZ5ck7w89md3vt+3RDZ9r1Qez7Rw3Zk2TXuQgk71cX57mtFfboGXO0SehlhAZ8FN0L5pXgrkn3B4C2WJ6Si/LM8p65K/pqxXNHVeTuPfyYn28YdqyqjWfzkNcsIndEWnl362tvlfy+yBNNV1cN3hCODSIZE7wm6GTw85dngBkj+HtsZ+pxGOWPMLBsjV6sQGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">42c69460833c7210c31199c0deaad310</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</flow>
+        <flow_variables_assigned>current_try,integration_success,integration_erro_message</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>11</order>
+        <outputs_assigned/>
+        <parent_ui_id>3ab5b356-d932-4863-b6fd-1e619dd9f875</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:05</sys_created_on>
+        <sys_id>36ab9ce4833c7210c31199c0deaad389</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:12</sys_updated_on>
+        <ui_id>c20397ab-ab43-46f8-b766-ced01bb1bd08</ui_id>
+        <values>H4sIAAAAAAAA/+1Y226bQBD9FYvXGhfMzaRPUdtIkZpGaty8VBGa3R2cVTGQZcmllv+9s4Cxc3MlK43Uxm/ewzJz5swcMfLCKmpd1rqaFodVJWe5dfDjYmjJ3GD0e2HlMEfrwOK1UpjrRKs7a2hdQ1YblH4KWZUZ3J2vEX4pM0GX21AlKIqgUVkHiweP9F2JSQYMM3rxONc4o1uUXNCRAbCYoz/xPB6NXYd7rhvH3BEIIDw/pHurNz+21AbThtqTfE0mAmWfo1DCMHKGFt5qzAVSzhSyCofWHHIBuqD3VohCEKd5tgYuKVBb6xxuK/mLYvuOuZciJeWdDv0x6TRayVNIjqellkXeIhpYttKuyOp5/rWtwaiLKdSZ3lC3rigeloazIdExSs8ui5tvq4RHMm/K6x5mBYesP4HWSrJaY2U6UsvpQ21a6MujvmCGcyPpHMpS5rOkVMW1bPIQ7floltFhlGbFDfEzozQCbmockZowOiL8UwOfg5Km4BMK0+X7nsurGo9N312fud54LGwhfNf2Ix7YgG5gR4JNfBaFOBmjtWzETa5qU1YrUydI0mpKFyquZKkPicI1ladVjSusGcSN8aDjtsuUStcqH6QiaSppKrwGNdqIMXg3cD9Yy+Vy2Bum0VOBUSCpas6xqjaM4zx2TtOene0zJc7vj7oQjYPSrQ7yvA0HHa+5Ds56rlsL6RzFiiJDyPeOesJRa23uO+peq17FVB6bsDD2IzvyQdh+mIY2gOfbocshiF0/cqJwB1M15T8z8qhUkcxpVmCGG3O/WERxEI3TAG1goW/7wTi0J17EbcadcZROYs7ieJQkbZlJpUHXVZKMulDL5WPjvEjM3Vx3Ro3PZ/03C7d+s+JnHPeZpBqc9FL9WczOe9Uq+Ytbb+I4/7r5enHue69v2Kv4Lhh7aew7wuY+Q/Kdw+yYJsOGIAQRB8KDkO3suwvjqjZ7u6k1M/jcBrTf2P6778t+Y3uhje2Bcfab21t31tvZ3LaM/n6D229w+w3uL29wArmsiNXUUDhe/etmHtzRFEm+Cd0U6qepZ40tfwPOtCk6vxMAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">01f39c6c83f87210c31199c0deaad3a7</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</flow>
+        <flow_variables_assigned>integration_success</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <parent_ui_id>4c8a9d72-bbdc-48db-b593-8847e337951e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:05</sys_created_on>
+        <sys_id>3aab9ce4833c7210c31199c0deaad387</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:12</sys_updated_on>
+        <ui_id>abd9ee9c-a726-4541-ac18-fcc85e758b68</ui_id>
+        <values>H4sIAAAAAAAA/+1VTY/aMBD9K5XPQEmTwsJtpQoJqe1KXbqXahVN7AlYdeysP2Ap4r93hgRYrar2Xu0p9hvPzHvPY+UgXIptimHlbkPQayvmPx4HQlvGaH0QFhoUc0Iirj1E7WwZkpQYghiILZjE0YzWSofWwP6hh6Knz0DIjTbKY1+3BU/lInoxP7wKxX2LpYEKDSWvKPn9AkzgEloRUgNUM4nFTZ7L6YdsLPMsm83kWCGAyvOczp2Tl1eq7+4vVP+qg5tTsHLOIFgCnFdMcjwQ+BzRKiQONfMZiAasguj8/oJ4BHVnzRXYUBcqJ/jwc9C/qHYx5nM1kl6JXeyyLXvrOlhunJZ41zLFDolQmT5HOpMa+7XTwqZjDcnEs+mEpED1sGXOTKJnVN9v3O7bueFC25O8PmicBHPZQYxeVyli4EtKevXamw76/KerQoMNtS0baFtt12Xr3VafWhHzZrQ2tBnVxu2IIk/bCCTLHJGhMFoQ/ukEP4DXrPkLlaFkbvnd6qeESx6FvLqpJrNiOpwWoIbFpJ4MAfJiOMkkfJxlxXQ8nYjjyd/yKbGyzqnek7KzlQ4E6XUbb4nCFnv5x0ce6q57N/+n6fvX/Ly9g7d38N+9A4VSB2K1YgrL8x+BA3saIi1fQjvnf7KeK3b8DagsUkRbBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">cd131c2c83f87210c31199c0deaad3e6</block>
+        <comment>Componente da integração, variáveis</comment>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</flow>
+        <flow_variables_assigned>active,retry_count,retry_timeout,current_try</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:05</sys_created_on>
+        <sys_id>72ab9ce4833c7210c31199c0deaad382</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:12</sys_updated_on>
+        <ui_id>12721817-61ce-47df-83c9-8c9ceb3d0e64</ui_id>
+        <values>H4sIAAAAAAAA/+1Z30/bMBD+V1CeNqnp8sNpE/aEmJCQtjFtHS8DRY59KdbcODgO0KH+7zs36Y+VwkOHJujyFl/Od9+dvy/1qfeOqk1Zm2qkjqpKjAvn8MdlzxGFteHzvVPQCTiHDmVG3IDTc26orK3Bx2cuqlLS6XlrMrq2HuxKSK6hDVVSjREMaOfwfuOVmZaQSpqBxM0j3PzuhMrKhhAcLVlAs4QBicOQDQPfY6HvJwnzOFDKQ8LRb7H5aIFuE61NYUMpJYEWaFCaWyhez4E7AwUHzJTbrD1nQgtOjdLTpUUD5WeFXBmuRGEwnGOd7yrxC2MTz/rlgFUxaN4tl2nboMbMrpRgcFYaoYrGYmgm2z1MyXpSfG7g29ZCTmtpFq1FS11hPCgtZguiRZR/u1K3XxcJT0QxL699KRWjcrmixmiR1QYqexS1GG32pjF93HYgIGGCadMJLUtRjNNSqxsxT4XIJ/2xxEU/l+oWIVoa9e0JqKKPDaX9E7R/mJvPqRa25k8YBjfblN8LcV3DqT3wBBjhNMtdFhHPJWRI3ThKhq7vJZT5JAtJ5DmzeX/T69pW1nSq7UnatBUdKqZFaVpSNOXPeksqazB6mjJVYxtXfH5I552pfFoYGM/La3g8eIrHQb7G468W2sFxC20r3pbRYpmjY/Qmo1e9+ZPRq3P5J3RmeRgRIKEb+lHmEj/I3Cz2mJtzLwtpQDyakB3obL+yC5ste50euHzK2frWujgYV/0xmC9aIWozfXPh3KV+HA7IME6ZVDVPvf5a1AundxC+fe/MZg9EZMQE8AfkBciIhA9kNFqCewRzJ6XXIqUkQsEMIHLBZ4lLkih3Yy8Gd8gDSBgLeTLgzyalBUF2FtNjamoDz/XkeZuKYrXWFit6Pn3N8p9NUfRJRQ3WFHXcgDsYzcFtRdyp6bWoCa9SfhgE3OWc+C4Zssil4Eeopiwm2XAAcQA737MuLXeb7M0AMafalqt5N0jsGbv/n0Fig9LdQLHnzH4h3+39HCi2iqkbLDpJdYPFXw4WG8rqBoxOVfsxYHBgokJUIwvhdPFfhX0xReYItm66VfqnrWdlm/0GPlNzLPUYAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">cac69460833c7210c31199c0deaad310</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>12</order>
+        <outputs_assigned/>
+        <parent_ui_id>3ab5b356-d932-4863-b6fd-1e619dd9f875</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:05</sys_created_on>
+        <sys_id>83ab9ce4833c7210c31199c0deaad38a</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:12</sys_updated_on>
+        <ui_id>d74e3c86-caf7-48b7-be70-aca7a6eecbe5</ui_id>
+        <values>H4sIAAAAAAAA/+1UTWvcMBD9K8ZnY/yRXZq9lJASCLQNNCGXNpixNF6LypIrybvZLv7vHfljsyQbGkqOvSyrN6OZ90bzvA9159rO2Tt9Ya1Yq3D1/SEKhfIY/d+HChoMVyHTigsntCoGIAo3IDsfuLaB0i5wNQYSrAuEcmjAZwYfKY0L20rY3b8tm9VCcoMTixYM9aKEcLV/FnK7FgsJJUoqeuuMUGu6LjidqgSq9JylLM+WeZYk2YeztFzmZZrxHBByypsvXs6igs8DEr2q1vcj3M6dtOGeVppEIT46VBypdQXSYhQ2oDg4bXYHxCDwGyWfgJp0U7nQJz9a8ZtqZ4uFT6yQNDIcg4djMY1xhFmtBcOb1hMcEQelnO4wLbtGfR11+AfACjrp5gcgpLNUD1tP2rOYKFW3td5+mxteCTUInIJSM5CHEzgaQ9k5tP5hUGJDhYoG2paGU7RGb8Rwmbg08VrSIa6k3lJTv2ExME88phlBfEX4pwG+ByO8ii9Uhi6PNEuwghXDNlI5Z0hCP4yl+NV5QqPASUoxToMSLDOidRfUZ4MT6z56ucpHW7zfDww3E4mYdcb4ks7s+v5HlyQ5G37580SDlFIw3SnX9y/3/d3qvoczzmFRLdJkcdoZZ8tTzjjhidftkP3FDv4B3+iGJEn+2+HYDsIW41pP2obm/+yGB7/6Ywc77g1HJiwRufPY9fz994EdLYBgx9BWm59ewhPW/wE+KTGBSQYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">4ec69460833c7210c31199c0deaad314</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>18</order>
+        <outputs_assigned/>
+        <parent_ui_id>59c39c13-96ae-470c-850a-3e5bd1088db4</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:05</sys_created_on>
+        <sys_id>87ab9ce4833c7210c31199c0deaad38d</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:13</sys_updated_on>
+        <ui_id>e2d6343a-e58a-441f-91ff-729f553fd4e3</ui_id>
+        <values>H4sIAAAAAAAA/+2UW2vbQBCF/0rYZyF0iUzjlxJaDIG2gSbkpQ1itBrZS1e76l7suMb/vbO62KZx2hL62Dfvmd2Zc0Yf3jHtXeedvdfX1oqlYvMvjxETKmj0e8cUtMjmjGtVCye0KnshYmuQPhRulMOlgVC6WICQ3uBbKtfCdhK2D7+/xVdC1gbHqR0Y6u3QsPnul5LbdlhKqFBSsztnhFrSc1HTqUmgSa94yvNslmdJkr25TKtZXqVZnQNCTvemh++mEBcfeiV6MV2YR7qdJmlTB1tpEjF8cqhqpNENSIsRa0HV4LTZHhSDUN8qeRRWQjlqx8LlJyt+UO+sKMLFBikjx6F4OJbj+gaZr7TgeNsFg4PioJLjG66lb9WnIUdYPDbgpZsWT4q31A+7YDq4GC01dyu9+TwNXAjVBxyLUnOQhxM4WkPlHdrwYVBiS43KFrqOllN2Rq9F/5i8tPFS0iFupN7Q0EBUDDwYj2lHEC9If9/LD2BESPGR2tDjwWYFVvCyp4/aOUMR9v1ayu8+GBoCjlHKYRt0wXIjOndNc9Y4ut5Hz9E9oXa36x2uRxOxOPJZWs85Wrvff/VJktd9u+dEv6LDv6D9CoqmSJPiPO2Xs3O0n+H8ZcSzPyAePspfEp4kyX/ETxEXthxQHbMNYLyW8MeA8zDBDtzUyIUlI/dBu5n+w0NhSwAIfipttPkWIhy1/U9XOG95DQYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">09131c2c83f87210c31199c0deaad3e9</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id>3022f437-8f85-4a65-9022-789087170552</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:05</sys_created_on>
+        <sys_id>b6ab9ce4833c7210c31199c0deaad385</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:12</sys_updated_on>
+        <ui_id>57661467-b5ed-46a5-94c4-96df4c0fb7b8</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">02c69460833c7210c31199c0deaad30f</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>10</order>
+        <outputs_assigned/>
+        <parent_ui_id>4c8a9d72-bbdc-48db-b593-8847e337951e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:05</sys_created_on>
+        <sys_id>b6ab9ce4833c7210c31199c0deaad388</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:12</sys_updated_on>
+        <ui_id>3ab5b356-d932-4863-b6fd-1e619dd9f875</ui_id>
+        <values>H4sIAAAAAAAA/+1UTW/TQBD9K8Vnx/JHnDS5oAoUqRJQiVa9QLUar8fJivWu2V0nDVH+O7O2k0Y0BYR65JZ98/XeeF52gW5d0zp7p6+sFUsVzL88hIFQHqPfu0BBjcE84FqVwgmtWAeEwRpk6wPXyuHSgA9dLEDI1uBbCpfCNhK297/P4ishS4PD1AYM9XZogvnul5DbNsgkFCip2a0zQi2pXJT0qmKokhlPeJZOsjSO08txUkyyIknLDBAyyjsUvjuIuPjQIeGL6vw8wu1hkjalp5XEYYCPDlWJNLoCaTEMalAlOG22R8QglDdKPgEroRy1C3zyoxU/qHea5z6xQtLIsQ8en2xYXw/zlRYcbxpPsEccFHKo4Vq2tfrU6/CLxwpa6Q6LJ6S11A8bT9qzGChVtyu9+XwYuBCqEzgEpeYgjy9wtIaidWj9h0GJNTViNTQNLYc1Rq9FV0xc6mgp6RFVUm9oqL+oCLgnHtGOIFoQ/r6D78EIr+IjtaHinmYBVnDWXR+1c4Yk7Lu1sO+tJ9QLHKSwfhuUYLkRjbuiOWscWO/D56d7crW73XSWT9MqxxEUk/FonKeT0WU25aOCx+m0upzxYjaLGOvJM+vAtZaxiOsS9/s3X9s4zsr4+aG/XuPX8MYM8ipP4vy8N8aTc94444qXDZH+wRD+E/6lH+I4/m+IU0MIy/rDHrR1w//ZDw/++PsJtr+bErmwROTOY9eHf3wf2NIBCH4KbbT55iU8YfufSPmnqjsGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">49131c2c83f87210c31199c0deaad3e8</block>
+        <comment>Daqui em diante segue o mesmo fluxo da integração, mudando o update record quando for sucesso para alterar apenas a temperatura</comment>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id>59c39c13-96ae-470c-850a-3e5bd1088db4</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:05</sys_created_on>
+        <sys_id>f2ab9ce4833c7210c31199c0deaad384</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:12</sys_updated_on>
+        <ui_id>3022f437-8f85-4a65-9022-789087170552</ui_id>
+        <values>H4sIAAAAAAAA/+2UXWvbMBSG/0rwtTH+aMKam1E2CoFthbX0ZivmWDpOxGTJk+SkWfB/35Flp2FNaRm73F30nq/3HD/kEOnOtZ2zd/rKWrFW0fLbQxwJ5TX6fYgUNBgtI6YVF05oVQ5CHG1Bdj6wUg7XBnxoJuxspYA5scX3lMKFbSXs71/PZBshucFxeguGZjg00fLwR8jtWywlVCip4a0zQq2pXHB61SnU2SXLWJEvijxN83cXWbUoqiznBSAUlDcVfpiWmX0alPjFLf080u00SRvubWVpHOGjQ8WRRtcgLcZRA4qD02Z/VAwCv1HySdgI5ahd5JMfrfhFvfP53CfWSDsyDMHjsxxPGGS20YLhTesNBsVBJccapmXXqC9hD398rKGTbjo+KZ2lfth6097FaKm+3ejd12ngtVDDgmNQagby+AJHZ6g6h9Z/GJTYUKOygbal45St0VsxFJOXJllLeiS11Dsa6slK/OfWKqEbQXJN+sdBvgcj/BafqQ0VB5sVWMHKgUJq5wyt0A9nKX923lBYcFylDNegBMuMaN3VgNXouo+fI3xC7+EwONyOJpKAZN9/79K04EOH5yC/rehfMH0J83qepfPzTF8szjF9huaXQc5fAdmf/o0cp2n6H+RTkIUtA5DjbgGMv+X4wUMbJtjADUcmLBm589pq+sf2gT0BINiptNPmh1/hSet/A2D3ZqL7BQAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f300246c833c7210c31199c0deaad302</block>
+        <comment>For each para percorrer o look up e server como o trigger da integração, para dar update na temperature</comment>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:25:16</sys_created_on>
+        <sys_id>ff00246c833c7210c31199c0deaad302</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:12</sys_updated_on>
+        <ui_id>59c39c13-96ae-470c-850a-3e5bd1088db4</ui_id>
+        <values>H4sIAAAAAAAA/51Sy27jMAz8F50Tw480cXIrsCjQQ1ugW/SyKAxaohNhZUmV5KRew/++VOykRY892RySwxmRAzNdsF3wL+bWe7nXbPfnbcGkjhj9D0xDi2zHZMDWswU7gupiPAzZuoSmxnqJ+U2xXDW8XJY1ZkssVqXYbjb1ZtMkz8iNE34cqVVIbxX0rz9n4AephMNZpAVH2gI6thu+pUJvsVJQo6JBMwP1S0FhthXNNku3vMjXRZ6mebnK6nVRZ7koAMWa6i6d97Ppb28Q2Sl0V176RBV5umD4EVALpEENKI8L1oIWEIzr2S64jgCHIJ606q8VB6kD0bFY++HlP+LO0jQWNkiOOE7Ja1jNDznB/GAkxycbpNETEqBWcw83qmv14yQ/rgAb6FS4rICQzhMf2qg5qpglNb8P5vR8GXgn9dnfnFSGg7pGEIKTdRfQxzWgwpaIqhaslXpfWWeO8txMWtpkryhIGmVONDSeWwI8Ck/oiSC5I/zXGX4FJ6OLB6Kh5vHsvnrv4tzJx6y4mkxTgedO2nBLdEecxY1v8V4nJj8dhkAuPQ18idj95cpjoqclS/4VOhn3N0r9xMb//N2dVi8DAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=baab9ce4833c7210c31199c0deaad328"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=baab9ce4833c7210c31199c0deaad328^sys_idNOT INb2ab9ce4833c7210c31199c0deaad34d,b6ab9ce4833c7210c31199c0deaad32f,b6ab9ce4833c7210c31199c0deaad343,baab9ce4833c7210c31199c0deaad346,beab9ce4833c7210c31199c0deaad349,faab9ce4833c7210c31199c0deaad333"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=9ec4dabf-c540-447a-8597-109ac14b3450</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>false</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>active</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Active</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</model>
+        <model_id>baab9ce4833c7210c31199c0deaad328</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_baab9ce4833c7210c31199c0deaad328</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:05</sys_created_on>
+        <sys_id>b2ab9ce4833c7210c31199c0deaad34d</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=cf354e43-315b-412b-b80c-fd0b3a240a94</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>retry_count</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Retry Count</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</model>
+        <model_id>baab9ce4833c7210c31199c0deaad328</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_baab9ce4833c7210c31199c0deaad328</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:04</sys_created_on>
+        <sys_id>b6ab9ce4833c7210c31199c0deaad32f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 15:06:04</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=953a26e5-e1c9-495f-808e-7d2e9cc3d96d</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>retry_timeout</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Retry Timeout</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</model>
+        <model_id>baab9ce4833c7210c31199c0deaad328</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_baab9ce4833c7210c31199c0deaad328</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:04</sys_created_on>
+        <sys_id>b6ab9ce4833c7210c31199c0deaad343</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 15:06:04</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=14b1322d-dd41-47c5-ae15-7db84b76e82e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current_try</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Current Try</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</model>
+        <model_id>baab9ce4833c7210c31199c0deaad328</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_baab9ce4833c7210c31199c0deaad328</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:05</sys_created_on>
+        <sys_id>baab9ce4833c7210c31199c0deaad346</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 15:06:05</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=523f940d-c4be-460b-9c72-a56ad95d3a6b</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>integration_erro_message</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Integration Erro Message</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</model>
+        <model_id>baab9ce4833c7210c31199c0deaad328</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_baab9ce4833c7210c31199c0deaad328</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:05</sys_created_on>
+        <sys_id>beab9ce4833c7210c31199c0deaad349</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 15:06:05</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=3b8b6947-74ad-46f6-aa34-61ca59147076</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>false</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>integration_success</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Integration Success</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</model>
+        <model_id>baab9ce4833c7210c31199c0deaad328</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_baab9ce4833c7210c31199c0deaad328</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 15:06:04</sys_created_on>
+        <sys_id>faab9ce4833c7210c31199c0deaad333</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_baab9ce4833c7210c31199c0deaad328"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_baab9ce4833c7210c31199c0deaad328"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_baab9ce4833c7210c31199c0deaad328"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_baab9ce4833c7210c31199c0deaad328"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=3012000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>1c9b8c6083f87210c31199c0deaad32e</copied_from>
+        <copied_from_name/>
+        <description>Latitude, Longitude and Temperature of the company branchs</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>daily_temperature_update_cd_allocator</internal_name>
+        <label_cache>[{"name":"85b63c01-52be-4704-85f8-2c165f6cafa5.Record","label":"1 - Look Up Record➛Branch Record","reference":"x_1836478_cloud_0_branch","reference_display":"Branch","type":"reference","base_type":"reference","usedInstances":{"1b611e54-1c2b-491f-9bd0-3e7d0d44ea1b":["record"],"4425b8a1-9a57-4f25-a3bc-44004f0447e6":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"85b63c01-52be-4704-85f8-2c165f6cafa5.Record.city","label":"1 - Look Up Record➛Branch Record➛City","reference":"","reference_display":"City","type":"string","base_type":"string","parent_table_name":"x_1836478_cloud_0_branch","column_name":"city","usedInstances":{"79572f5e-ab64-4526-837c-bc027f89cb99":["city"]}},{"name":"Created_1.current.city","label":"Trigger - Record Created➛Branch Record➛City","reference":"","reference_display":"City","type":"string","base_type":"string","parent_table_name":"x_1836478_cloud_0_branch","column_name":"city","usedInstances":{}},{"name":"flow_variable.retry_count","label":"Flow Variables➛Retry Count","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","usedInstances":{"4c8a9d72-bbdc-48db-b593-8847e337951e":["condition"],"d74e3c86-caf7-48b7-be70-aca7a6eecbe5":["condition"]},"attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"cf354e43-315b-412b-b80c-fd0b3a240a94"}},{"name":"flow_variable.current_try","label":"Flow Variables➛Current Try","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","usedInstances":{"4c8a9d72-bbdc-48db-b593-8847e337951e":["condition"],"d74e3c86-caf7-48b7-be70-aca7a6eecbe5":["condition"]},"attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"14b1322d-dd41-47c5-ae15-7db84b76e82e"}},{"name":"flow_variable.integration_success","label":"Flow Variables➛Integration Success","reference":"","reference_display":"","type":"boolean","base_type":"boolean","column_name":"","usedInstances":{"4c8a9d72-bbdc-48db-b593-8847e337951e":["condition"],"e2d6343a-e58a-441f-91ff-729f553fd4e3":["condition"]},"attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"3b8b6947-74ad-46f6-aa34-61ca59147076"}},{"name":"flow_variable.active","label":"Flow Variables➛Active","reference":"","reference_display":"","type":"boolean","base_type":"boolean","column_name":"","choices":[],"usedInstances":{"3022f437-8f85-4a65-9022-789087170552":["condition"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"9ec4dabf-c540-447a-8597-109ac14b3450"}},{"name":"Created_1.current","label":"Trigger - Record Created➛Branch Record","reference":"x_1836478_cloud_0_branch","reference_display":"Branch","type":"reference","base_type":"reference","usedInstances":{"95b3e02c-2e7c-4f5a-bcae-37be548b3909":["record"]},"attributes":{}},{"name":"79572f5e-ab64-4526-837c-bc027f89cb99.__action_status__.code","label":"9 - Integration Cloud Dimensions Allocator➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","usedInstances":{"3ab5b356-d932-4863-b6fd-1e619dd9f875":["condition"]},"attributes":{}},{"name":"79572f5e-ab64-4526-837c-bc027f89cb99.__action_status__.message","label":"9 - Integration Cloud Dimensions Allocator➛Action Status➛Message","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"c20397ab-ab43-46f8-b766-ced01bb1bd08":["integration_erro_message-2"]},"attributes":{}},{"name":"flow_variable.retry_timeout","label":"Flow Variables➛Retry Timeout","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","usedInstances":{"b611526f-aac5-424d-8459-21959da20089":["seconds"]},"attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"953a26e5-e1c9-495f-808e-7d2e9cc3d96d"}},{"name":"b611526f-aac5-424d-8459-21959da20089.duration","label":"13 - Cloud Dimensions Convert Seconds➛Duration","reference_display":"Duration","type":"glide_duration","base_type":"glide_duration","usedInstances":{"0516c1ac-c5fa-4869-95a8-d0170fab7960":["timer_duration"]},"attributes":{"uiType":"glide_duration","uiTypeLabel":"Duration","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2891e96d-184a-4a1c-bcb0-0bde1ef9c502"}},{"name":"79572f5e-ab64-4526-837c-bc027f89cb99.latitude","label":"9 - Integration Cloud Dimensions Allocator➛Latitude","reference_display":"Latitude","type":"float","base_type":"float","usedInstances":{"4425b8a1-9a57-4f25-a3bc-44004f0447e6":["latitude"]},"attributes":{"uiType":"float","uiTypeLabel":"Floating Point Number","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"6b9ef811-c12c-45d2-b6e7-af8cc37f3308"}},{"name":"79572f5e-ab64-4526-837c-bc027f89cb99.longitude","label":"9 - Integration Cloud Dimensions Allocator➛Longitude","reference_display":"Longitude","type":"float","base_type":"float","usedInstances":{"4425b8a1-9a57-4f25-a3bc-44004f0447e6":["longitude"]},"attributes":{"uiType":"float","uiTypeLabel":"Floating Point Number","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"3fb05313-f937-4c3a-a74f-723840ce69a4"}},{"name":"79572f5e-ab64-4526-837c-bc027f89cb99.temperature","label":"9 - Integration Cloud Dimensions Allocator➛Temperature","reference_display":"Temperature","type":"integer","base_type":"integer","usedInstances":{"4425b8a1-9a57-4f25-a3bc-44004f0447e6":["temperature"]},"attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7258389a-64fb-4b4b-ae2d-64a8bb616a16"}},{"name":"flow_variable.integration_erro_message","label":"Flow Variables➛Integration Erro Message","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"8063b96e-d757-44f6-a63c-5a79acddede6":["description"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"523f940d-c4be-460b-9c72-a56ad95d3a6b"}},{"name":"168afbeb-e253-4fc8-8be1-e348d977b77f.Records","label":"1 - Look Up Records➛Branch Records","reference":"x_1836478_cloud_0_branch","reference_display":"Branch","type":"records","base_type":"records","usedInstances":{"59c39c13-96ae-470c-850a-3e5bd1088db4":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"168afbeb-e253-4fc8-8be1-e348d977b77f.Table","label":"1 - Look Up Records➛Branch Table","reference":"x_1836478_cloud_0_branch","reference_display":"Branch","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"59c39c13-96ae-470c-850a-3e5bd1088db4.item.city","label":"3 - For Each➛Branch Record➛City","reference":"","reference_display":"City","type":"string","base_type":"string","parent_table_name":"x_1836478_cloud_0_branch","column_name":"city","usedInstances":{"79572f5e-ab64-4526-837c-bc027f89cb99":["city"]}},{"name":"59c39c13-96ae-470c-850a-3e5bd1088db4.item","label":"3 - For Each➛Branch Record","reference":"x_1836478_cloud_0_branch","reference_display":"Branch","type":"reference","base_type":"reference","usedInstances":{"4425b8a1-9a57-4f25-a3bc-44004f0447e6":["record"],"1b611e54-1c2b-491f-9bd0-3e7d0d44ea1b":["record"],"483f1619-0cc0-4082-ae0c-2f114bdd82bc":["record"]},"attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"59c39c13-96ae-470c-850a-3e5bd1088db4.item.state","label":"3 - For Each➛Branch Record➛State","reference":"","reference_display":"State","type":"string","base_type":"string","parent_table_name":"x_1836478_cloud_0_branch","column_name":"state","usedInstances":{"79572f5e-ab64-4526-837c-bc027f89cb99":["city"]}}]</label_cache>
+        <master>true</master>
+        <name>Daily Temperature Update CD Allocator</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Daily Temperature Update CD Allocator">baab9ce4833c7210c31199c0deaad328</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a77fa4ec837c7210c31199c0deaad307</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:16</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=a77fa4ec837c7210c31199c0deaad307"/>
+    <sys_variable_value action="delete_multiple" query="document_key=a77fa4ec837c7210c31199c0deaad307"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=a77fa4ec837c7210c31199c0deaad307"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=a77fa4ec837c7210c31199c0deaad307^sys_idNOT IN277fa4ec837c7210c31199c0deaad308"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>a77fa4ec837c7210c31199c0deaad307</id>
+        <name>Daily Temperature Update CD Allocator</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:41</sys_created_on>
+        <sys_id>277fa4ec837c7210c31199c0deaad308</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 16:32:41</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=277fa4ec837c7210c31199c0deaad308"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=a77fa4ec837c7210c31199c0deaad307"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=a77fa4ec837c7210c31199c0deaad307"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a77fa4ec837c7210c31199c0deaad307"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=a77fa4ec837c7210c31199c0deaad307^sys_idNOT INb77fa4ec837c7210c31199c0deaad348"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment>Vai rodar todo dia as 9</comment>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</flow>
+        <name>Daily</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>b77fa4ec837c7210c31199c0deaad348</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 16:32:42</sys_updated_on>
+        <trigger_definition display_value="Daily">89142dc0c32222002841b63b12d3ae8a</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/21SXWvcMBD8K0XPFyPfpR/xW6Ec5KENNCEvIZi1tL5bWEuqLF/ihvz3rmz1aEOMXnZ2Z3Zm8cOLYuiQVaPuaEC1UeQSRgd8NwcU9MBksU1rbwBnIfk4qybFCTfKR4tRNbXWG3UCnvB2Hq+t0GTYwZAFCnXpSllffdYXupb3QV81WsuTrjkS24hONQ+PGxUgCjdl5Zc3LcriO7CXaI02u618Wm+/XNbdp11Xb+0OED+K4JtQ/3tJ70T7Nwk+J3QWZVUPPOI7uSOCvXE8nyeOcrY19gDPI/3GIhWxRzFvcG2ey9bSGBjmFTZHTwZvQiLvViRBx4VjPE+D+7EmkNpiDxOn+3JQQaZR9DBkz9lFsdTfHv3Tz78L9+SWgKXJ3gCfK0gpUjclHPPFkXEQoXaAEMgd2hD9iRayeBmq5WxVz/5Jlo50cBWYbLySE0G1F/zbAt9DpJziu8gI+XVJ3/6a8t41R3HcrqFloBxlT8jlJxpNpJC+yoITFruvj38Aa+OqGrUCAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>daily</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=a77fa4ec837c7210c31199c0deaad307^sys_idNOT IN337fa4ec837c7210c31199c0deaad345,777fa4ec837c7210c31199c0deaad346,7f7fa4ec837c7210c31199c0deaad345,b37fa4ec837c7210c31199c0deaad347,bb7fa4ec837c7210c31199c0deaad347,f37fa4ec837c7210c31199c0deaad344,ff7fa4ec837c7210c31199c0deaad342"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Integration Cloud Dimensions Allocator">9740506883f87210c31199c0deaad30e</action_type>
+        <action_type_parent display_value="Integration Cloud Dimensions Allocator">5ecb406c83b87210c31199c0deaad33d</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9740506883f87210c31199c0deaad30e</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>4c8a9d72-bbdc-48db-b593-8847e337951e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>337fa4ec837c7210c31199c0deaad345</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:15</sys_updated_on>
+        <ui_id>79572f5e-ab64-4526-837c-bc027f89cb99</ui_id>
+        <values>H4sIAAAAAAAA/72STW/bMAyG/4vOsSHH+bCz05CiwIBtBdatl6IIaIlOBMiyq4+0XuD/Pip2sq27bJfdxJek+PKRHk9MSbZh2XrBl3xVFHldrOcZF3mWlaXgEgEkndmMGWiQKoXyPUVH0CGGp9OyFHkpsjwpV4DJYs1FUiw5JDkuK5nxopDVIlUemzS2DsO7f2lxHjwOAw2UynUa+of/PVcclJYWDds8Ps1YB5YweLRsc3qT+luOGirUVLodQf6O1fddjJy3yuyn+OPUcH8RWyujgWzG8NWjkUiTa9AOZ6wBI8G3tmcbbwMJFkHeGd1fKw7KeLqMxdpXp77TuIJzHitrpGUEjtlruJvIj3J9Ax7ISRA+2KlUHFol0I0YJNYQtN/+qo0Fd51XrRlbPFT60t3q0JjPIwZ2veDy0KQERyawi5tG79Mi9f2hfflycXmrzBnKlNStAH2NwBO6Kvjo58SC+vqG8qj8wRk1NjRx10DXkbLrbHtU5ylkukn3moK01u0LuXNqb1IQccOUXgDSW9JvzvIDWBXX/UTXUHMc982o54Af4o+pOZRrLOfJar6kPwlFllQVfUy5KHgBWSFLUbFhxlzvthqc+wmKXmj3HOKaI7YJ0G5kHFuEVZ1/T6aOOLEYnn4AM245cfIDAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</flow>
+        <generation_source/>
+        <order>16</order>
+        <parent_ui_id>078b8c01-a92a-4e59-a887-419f6e745619</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>777fa4ec837c7210c31199c0deaad346</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 16:32:42</sys_updated_on>
+        <ui_id>4425b8a1-9a57-4f25-a3bc-44004f0447e6</ui_id>
+        <values>H4sIAAAAAAAA/+VVTU/cMBD9K8jnTeR87SZ7a1khVaIgQcUFUDSxJ6wl56OOA2yj/e91EmeJAFGQuKDmNjN+9pvnefF1RwQnaxIip17iLVngBYFPqR+HXrYMMs/nASB6ZEFKKNCsVMgqxU18D7LtE10XJSxImBc4yRLQCVeUOXFEwQkwyrhH45hnoSs0Fvu9wXHR1BJ2VxZuMmwrJFdYkvX17YLUoMxJGhVZd89K76UqIUNpll5MXJ9z17u6j3nF2gJLnYopeWqRG1s5+rExFQPq6Xh0QfBRY8nREMlBNrggBZQcdKV2ZK1VaxIKgZ+XcndYsRWlHhst4LERf8zJIe3X5Wg6Y1aEQ5hagcZ0vgENl2Znplt10KsSDJtRE445tFIfz3PjgvNai6ocIRoyOaEr2Rbl2agIOWwwu4+2MSSw7vvsmY9t5Zfb6uFiInkiykES26KsGMhDBForkbW6p9MRlDhoXEBdi/IurVV1LwawoVK4d9IEbi6rB3NmI+5KF1jP2zWqgnti8pshfQVK9E38NNsY8H5Bml1zLKFpnloxGqa/257J2JhtIR1UGCRIh0nowUyJWn8zR92jJb5fWDNk0VsTxpKngZrt+WSIx9SLg2W4ilMmq5anNM0UlGz7cva/T/mPOeAd/CYH/Bru/XW+1gQvcqdz7NHZWLAWiD7NAvFXsoBt48t74F+TT/03/62zSRqGvZlNvfm9G07QX9FNS2nAu26VRCs/j9CBbBk6YeQvnThYMSdj1F/lccKyJHFnuNeeh8/a9mMOe4cOk8NOBErevCLMZC9DRILGdBTqmcVs8ejKFg8vzaf5zFvS4ftCbvtvHpzbv8ueVS5/CQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Cloud Dimensions Convert Seconds">aa14d0ac83f87210c31199c0deaad313</action_type>
+        <action_type_parent display_value="Cloud Dimensions Convert Seconds">bc1450ac83f87210c31199c0deaad36f</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>aa14d0ac83f87210c31199c0deaad313</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</flow>
+        <generation_source/>
+        <order>13</order>
+        <parent_ui_id>d74e3c86-caf7-48b7-be70-aca7a6eecbe5</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>7f7fa4ec837c7210c31199c0deaad345</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 16:32:42</sys_updated_on>
+        <ui_id>b611526f-aac5-424d-8459-21959da20089</ui_id>
+        <values>H4sIAAAAAAAA/41STU/jMBD9Lz6nUdJGpe1tBUJCWkDa7nJBKJrak9aSYwd/FLJV/vuO6xAQvezN8zwf772Z5xOTgm0YQlmJAvhq0ayu5mXBF2W5XvNCIIBYlEuWMQ0tUqZDbrRwBBxBhYicTo0yb/URrISdwtyit33tZYsm+GGgTCFdp6B/GgsI4QephEXNNs8vGevAUnOPlm1O377+l52CHSpK3U70Lvj6vouA1B73NCoBP8e6uwk1VkQiZcbw3aMWSAwaUA4z1oIW4I3t2cbbQIBFEI9a9VPGgbonhS28O/mXBlZFzGuQJPFR/RTWozMJbm7Aw5Y6cx/sZJSRHF0yQ2ADQfnrr1hKeOy8NDqV+LiFsdqo0OqH5ASbGnxZRHBEAruoMzIfZTTbg3n79cHyVuqzJeOnMhzUFIH3Vu6Cj3xOLMjf311O0KXPqLClmXULXSf1vu6sOcrzHKLd5ntFQX6+LIFO7nUOPGrMaQOQ3xJ+c4afxrO7pzbjvD9avga8i5ezKmAJc1jNuKiaWTVflzMo6LWrFmJdLMW8uKrYkDHXu2sFzn1aRTuqX0MUmowbLaqTy7GEW9n5H0TqiJMbCYxOfNxdfF5mDsPw8g/oJQadfAMAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</flow>
+        <generation_source/>
+        <order>19</order>
+        <parent_ui_id>e2d6343a-e58a-441f-91ff-729f553fd4e3</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>b37fa4ec837c7210c31199c0deaad347</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 16:32:42</sys_updated_on>
+        <ui_id>8063b96e-d757-44f6-a63c-5a79acddede6</ui_id>
+        <values>H4sIAAAAAAAA/+1V32vbMBD+V4yeTbDjNkvyVloCha2FtfSlaYxsnROBLHmSnDQL+d93kuwk9AfrYDAK89t9dzp9993p/LgjnJEpGaWQnE/SUZmlWTZMkuH4LC1GWZEOWUYBzkhMJK0BIy0tBOTeiMmaitaBXJacgbQIMW4aQbcPnef66ClXXDANkkwfn2LSUI05LGgy3b1wfZSRoAUIDL13lN5haLfNm9jX07PRTXAozRyfJCbwbEEyQCIVFQZiUlPJqFV6S6ZWtwhooOxWiu0hYsWxyikhLvbZ8J947ThxcRVgZSUE38HMO6ECXF1RS+8wc2lb3YWWK8VLMEETBhVthb08xULAbWO5kuGIL7M7rURby5sgCTkk6PuCSGuQBDSuTse8K6O6W6nN957ljEsvSecUqqTiYFFrNS9a6/jsCAioMVFe06bhcpk3Wq25P4xc6sFSoDGohNrgpYYv5YCWjvgAZaWDGeJXHn6gmrsqvmEaPLyPidmaS0GNOdaCIuY/WsckVNbVkAcZ3JFS88Ze4AVr6Oju437UGSSTdwcrLY6D5KfbnIy5WSltHX2fHsnP2yTJ2LW0sNTUAdGMcoEdjKNStYJFUtlIA8q0hsiuIHLFLl4luEfPaZIqJIk21ES7ndds3cky4Me4HLRWeQ3G0CXs94uSogtHNCQ1qrIbqmHB6walDmC2aPUSG7vtTeynAJ1zFoDdvH/AczKdk0uhWhZdsJrLOYnnQQjvKdLzYfJlPB5nRZIN0wTVTCeTMmFAKcvYuQ/34+jDsYc5zpv2sDPwwo+l2b/eKf/b8G/a8IcL/PfvrF/gMw6CmTceXr+9oUYtLOThIb7Y4J0zeuic3RZP/9YWT0eJ/z7RLg/FffpVfvLXfmepP/0C58C/wMEIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Integration Status = Failure</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</flow>
+        <generation_source/>
+        <order>20</order>
+        <parent_ui_id>e2d6343a-e58a-441f-91ff-729f553fd4e3</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>bb7fa4ec837c7210c31199c0deaad347</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 16:32:42</sys_updated_on>
+        <ui_id>483f1619-0cc0-4082-ae0c-2f114bdd82bc</ui_id>
+        <values>H4sIAAAAAAAA/+VVTU/jMBD9K8jntnKatqS97VIhrcSCBCsugKKJPW0tOU7WdoBu1f++k8QpFUVdkLig7W2+7Pee5zV3G6Ykm7ERSh5No4mIozgecj5MRlE2ibNoKGNAjFiPGciROi2KwkqKH0FXdWKzGU9FPBVR3J9OAPujUy76yZhDP8ZxJiOeJDIbDZTHfLulOalcqWF9G8YpI1ZKS4uGze4eeqwESzd5tGy2eVV6L1QNGWpqve6wvsbu12Udy0JUORqfqi55ESbnoXLyY04VGqrhRLzH8NmjkUhAFqAd9lgORoIv7JrNvK0oYRHkldHrXcdKGd8SzeHZqT9084jXfQskZiKIsAvTIFCbXszBww2dLHxld3oVSqBrNZG4gEr7s/1c23BVelWYdsRDprvpQle5uWwVYbsD9t6jcgQCy5pnjbyltbhZFU/XHchzZRpJAkVdCNC7CLy3Kqt8DWfDUGOjcQ5lqcwyLW3xqJphgpIPlpqCwUIXT3SnU0szAFHjHpCqMDin/LxJ34JVNYmfdAwNb3vMrd2ZBudeqJCG6e+qRtISCxTSRoVGgrTZhHpYWFX6b3TVIwbg214wQzY+tmFi+rJQe2e+GOI5jZJ4MjpNUqGLSqY8zSwYsTrc/e9d/mMOeAe+zgG/mnd/G28wwUHuYn/25LItBAuMP80CyVeyQKDx5T3wr83nw6P/rXub1Cy729t6emFcWqhhp86Dr9x9xXks48O1P9b6MSe8A2/nhHOFWro3CHQ2wJwwekxbQq+sEIont6G4+yJ8mh+iCW9+X8gV/82H4eEvlyhALCcJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Integration Status = Off</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>3022f437-8f85-4a65-9022-789087170552</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>f37fa4ec837c7210c31199c0deaad344</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 16:32:42</sys_updated_on>
+        <ui_id>1b611e54-1c2b-491f-9bd0-3e7d0d44ea1b</ui_id>
+        <values>H4sIAAAAAAAA/+VVTU/jMBD9K8jntnKatKS97VIhrcSCBCsugKKJPW0tOU7WdoBu1f++k8QpFSAWJC5oe5sv+73nec3NlinJ5ixByaNZNBVxFMdjzsdpEuXTOI/GMgbEiA2YgQKp06IoraT4HnTdJLbbyUzEMxHFw9kUcJgcczFMJxyGMU5yGfE0lXkyUh6L3Y7mpHKVhs11GKeMWCstLRo2v7kbsAos3eTRsvn2Wem9UDXkqKn1ssf6HLvfVE0sS1EXaHym+uRZmFyEytGPBVVoqIET8QHDR49GIgFZgnY4YAUYCb60Gzb3tqaERZAXRm/2HWtlfEe0gEen/tDNCW/6lkjMRBBhH2ZBoC69XICHKzpZ+Nru9SqVQNdpInEJtfYnh7mu4aLyqjTdiIdc99Olrgtz3inC9gccvEftCARWDc8GeUdrebUuHy57kKfKtJIEiroUoPcReG9VXvsGzpahxlbjAqpKmVVW2fJetcMEpRitNAWjpS4f6E6nVmYEosE9IlVhdEr5RZu+BqsaEj/pGBreDZjbuBMNzj1RIQ2z33WDpCMWKGStCq0EWbsJzbCwqvLf6Kp7DMB3g2CGfPLWhonZ00IdnPlkiMcsSuNpcpxmQpe1zHiWWzBi/XL3v/f5jzngHfh6B/xq3/11vMEEL3Jnh7NH510hWGDyaRZIv5IFAo0v74F/bT4fv/nferBJ7bK7g62nF8aVhQZ25jz42t3WnMcyebn2b7V+zAnvwNs74VShlu4VAr0NsCCMHrOO0DMrhOLRdSjuvwif5odoytvfF3LFf/NhuPsLrGXbqycJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment>Look records pra fazer o papel do trigger que tinha antes</comment>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>ff7fa4ec837c7210c31199c0deaad342</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 16:32:42</sys_updated_on>
+        <ui_id>168afbeb-e253-4fc8-8be1-e348d977b77f</ui_id>
+        <values>H4sIAAAAAAAA/+VXW2vbMBT+K0HPIdh1mmZ929oVCm0zmjAYpQhZlhMxxfYkOZeG/PcdWfKFxO0SSKFljzoX6TvnfJ8sP20Qj9AlGsZ9zyP++fDC84LA8waDgBI/DIMBDb2wH6IuSsicQaQmoWCwXBCRm/UK+8Ng0L8YYirSPMIeDiVJ6AxCIq4yQdY/XeS30k5nXESSJejy6bmLMiJhZ80kutzsuA6FJkjIBIROHLYdqHqdVUtc+KztrpnWebCOVEYGitdFbKVZEjHAEBOhWBfNSRIRncp1ZZGMRKNE1IYZTzTsiEzwSvEXOHfombiYQVWUWV+1xK5F1hxfE03GWuZU59KF0lnKKVO2HxGLSS70VdNmA0aZ5mliU2zZNjsV+Tx5sO1A1QblRMCSKwDBMlOoQe7KiMezdPlYorzhSdET5xQpJaJaEa0lD3Nt8GwQE2wOG+E5yTKeTHEm0wUvkgHLvDcVsOjFIl3CoYpPkx6hBngP+kp6N2C/Lsw/ieSminvYBpIBEBfAEGxHqNJcFq1cAOdyVTiAW8ruhbZdpNbqShCl6sqh5fhPbnDbPriKsW2aSaGSZ/orbLFgrrht9yB1nHs15WiaRNygUA2JUK7Xt+OH0eT7/Y/Jr31h7PlPKZACXSmQqya8NshOKnu2u7YNnFT8k0kF6vhMYoHDP55Wjme/bcE/JEAv3iTZec0nlUqNbS8bGthn/dE8PwBCyfORYWYnXL+GytE85kxEbV+EG+PY+SKc/Z9fhA9JcgAUYTs9ngieFJ93APpe7PfevmK/7PCsoFfN/cJGFN3XAOnotPNytBIOgFMqYQxndyYWTwvE8r4vKLN715dGJ4DgZAIIzk4jgE1VZtXIlp6XLzozzTL+xcST3XigYCPB37YJ7Kgz/WPPPNvuCzg4SsFNslnP9SucO/HT7xVFdt/zCphBqjsPW/3iJY+mTNenl1FRqpdE/G7zO8bhclBFee/wjOy/KduBX0sUlIIlUzC85jvSh+fR/h3i96z5uCvkACxlO+7JqvNYgWlF6K4RUDqbFrNp3iO3ldWRvH/CB+OH/ZKWw2rVYDmzT/H3dTohPP8F/IQN8W8QAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=a77fa4ec837c7210c31199c0deaad307"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=a77fa4ec837c7210c31199c0deaad307^sys_idNOT IN3b7fa4ec837c7210c31199c0deaad341,3f7fa4ec837c7210c31199c0deaad33f,737fa4ec837c7210c31199c0deaad33e,737fa4ec837c7210c31199c0deaad342,777fa4ec837c7210c31199c0deaad340,7b7fa4ec837c7210c31199c0deaad33c,7f7fa4ec837c7210c31199c0deaad33a,b37fa4ec837c7210c31199c0deaad33d,bb7fa4ec837c7210c31199c0deaad33e,f37fa4ec837c7210c31199c0deaad33f,fb7fa4ec837c7210c31199c0deaad33b,ff7fa4ec837c7210c31199c0deaad339"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">cac69460833c7210c31199c0deaad313</block>
+        <comment/>
+        <connected_to>3ab5b356-d932-4863-b6fd-1e619dd9f875</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>15</order>
+        <outputs_assigned/>
+        <parent_ui_id>4c8a9d72-bbdc-48db-b593-8847e337951e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>3b7fa4ec837c7210c31199c0deaad341</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:16</sys_updated_on>
+        <ui_id>078b8c01-a92a-4e59-a887-419f6e745619</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">cac69460833c7210c31199c0deaad310</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>12</order>
+        <outputs_assigned/>
+        <parent_ui_id>3ab5b356-d932-4863-b6fd-1e619dd9f875</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>3f7fa4ec837c7210c31199c0deaad33f</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:15</sys_updated_on>
+        <ui_id>d74e3c86-caf7-48b7-be70-aca7a6eecbe5</ui_id>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0bPJvijCWteRkkpFLoV1tKXrZhrWU7EZMnTR1LP+L/vyh9JaFPWsj7uxVhHV/eec6yDW6KcrZ019+rCGL6WZPn9MSRcegzfWyKhYmRJqJIFt1zJrAdCsgXh/Ma1CaSygd2wQICxAZeWafCVwWcsK7ipBTQPb6umGy4KzUYWNWichQVk2T7b4gU2KyMo43Ma0zRZpEkUJZ/O4nyR5nFSpMAgxYYCciawdDXRD256JHxVl21qjxuruVyP65uxy90EKl14VnEUEvZkmSwY8ilBGBaSCmQBVulmj2gGxa0UB2CDsrEd8cVPhv/Ggcl87gtLhhIpGzb3y2x0cYDLS7CAVBy1To+ldKM4ZWYwp2AlOGFXx9hQcFt7qcMRC7mYTivhKvl1cITsG0wfDRFnkASrvVJPfdRR3m3U7tvE8orL3pVxUygKYr8Ci97lzno+LWGCVdgoq6Cu0dGs1mrL+8PIpZqtBS5mpVA7HOpv5QyoJz5DY2F2hfhlDz+A5l7FF2yDhweaORhOs/4GYzu0iZEuJKYxK7xx5iAS3c1+OU9xkDyKywZ//BGqeW0vcPKWjTq68GUgjrLQtj3n7UhrRp3WvqXVTdf9cFGU0v5ZPC/UDEsyqpy0XfcyNR/W9335Ood5OY+j+el8nS1O5etEst4ZquQvofJf9I2ZiqLof6j+OVTcZEMURm398A/M1KMP0DBz7zXlBqnde+x6+hf5jQYvF6fH0E7pn17UAev+ACdna4rVBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">01f39c6c83f87210c31199c0deaad3a7</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</flow>
+        <flow_variables_assigned>integration_success</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <parent_ui_id>4c8a9d72-bbdc-48db-b593-8847e337951e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>737fa4ec837c7210c31199c0deaad33e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:15</sys_updated_on>
+        <ui_id>abd9ee9c-a726-4541-ac18-fcc85e758b68</ui_id>
+        <values>H4sIAAAAAAAA/+1VTW8aMRD9K5XPC2W7WwjcoiAkpLaRCs0lilaztheseu2NPyAU8d87xgbSqMoxJ05rv7Fn3nvj0e6J9q7zzi71rbVipcjk8SkjQgUM13siGJkQkhEFLceVUI6vDDihVWU9pdxaDG5A+hDNcc2E7STsHhLkDH4yQtdCMsNT/g4MpnPckMn+TehYrwGox5SXN0VBR1/yAS3yfDymA8YBWFEUmFBCzSUenV8IfVqcCb3L1u26EKy1lhxUAr6lfEvk+3kG0gbW2rDAcZAR/uK4YhzJNSGWkRYUA6fN7owYDuxeyQuwxvLRvBZerPiDRctBONdwlEt5jJ23VXIuws0UHCzQPeq8SUfpWgvUEI1ivAEv3d1rLB6474LgeMVBLU+3tfSt+hGdIecEp0Y1SXOCp/+28RT1FnnyLngRxCWlzWKttz9PQmZCHW1LQakpyPMOnDOi9i5Q3hMvlm+bEaH/toNL3mLZqoWuE2pVdUZvxLEUimv7K4mbfiP1FimGx9wHGpzoY6OgP0N8eoQfwIhgy3dMg5dDyV9KPHs+D2+vqG/q4bgc9UYlsF45bIY9gKLsDXMKX8d5ORqMhuSQEbuzdxKsvRiKnayefdAa7U0uVbEX4Qo1onO3SGrDkyGHpzA9kc914K4Ddx24Dxg4xqmwyHMZSM1P/7oQ2OE7FvQ1tNXmd1B4wQ5/AXGxGcE1BwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">4ec69460833c7210c31199c0deaad314</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>18</order>
+        <outputs_assigned/>
+        <parent_ui_id>59c39c13-96ae-470c-850a-3e5bd1088db4</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>737fa4ec837c7210c31199c0deaad342</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:16</sys_updated_on>
+        <ui_id>e2d6343a-e58a-441f-91ff-729f553fd4e3</ui_id>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYBnQdAjNhpfisCBgQBpAzRBLm0grCjKJkqRKh92XMH/3qUo2UbjPtLk2Js4Sy5nhjtQR5SzrbPmXl0aw5eSzD4/RoRLj+F3RyQ0jMwIVbLilitZ9EBE1iCcL1xLy5YafOlsAVw4zd5jueKmFbB9+P0uuuKi0my4tQWNvS3TZNb9VOIVNqkTqNMLmtI8m+ZZkmTvztNympdpVuXAIMeGAkomcOt8pHt20yPRL3XYbetxYzWXy2F9M3S5G0GlK88qTSLCniyTFUM+NQjDItKArMAqvd0jmkF1K8UBWHFpsR3xm58M/44XZpOJ31gzlEhZKO6XxeBegOsrsIBUHLVoW8DoSnHKTDCnYjU4YefHWNhw23qp4YiFUoynlXCN/BgcIfsG42Mh4gySYK1X6qkPOuq7ldp8GlkuuOxdGYpCURD7FVj0rnTW8+kIE6zBRkUDbYuOFq1Wa94fRi5NvBS4iGuhNnipn8IYqCceo7EQLxC/6uEH0Nyr+IBt8HCgWYLhtOgnFtuhTYzsImK2Zi7AmINIdLf45jzFIHkQVwR//BGqeWsv8eY1G3TsoucBOJr9rus5rwdaMT9MeWEcxccwu90XlyR51bd7not/6PCyzFzApJ6kyeR0Zs6npzJzIi0vDEr2h6D4V/rLnCRJ8j8orw4KN0UY70FbGKa3y8mjD0W4c+815Qap3Xvsevyf+MIWh4vTY2ij9Fcv6oDtfgBcPjkjmQYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">c6c69460833c7210c31199c0deaad312</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
+        <order>14</order>
+        <outputs_assigned/>
+        <parent_ui_id>d74e3c86-caf7-48b7-be70-aca7a6eecbe5</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>777fa4ec837c7210c31199c0deaad340</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:16</sys_updated_on>
+        <ui_id>0516c1ac-c5fa-4869-95a8-d0170fab7960</ui_id>
+        <values>H4sIAAAAAAAA/+1Z227bOBD9FUPPjlfUzbHfimQDFOhuF7GRl0UhUNTIJpaWtBSV1Gv435ekqItt2Y1bp3CBPCWaoYZnZs4ZkcnGykqRl6KYZx+Kgi5Sa/r3l6FFU2WTv2+sFK/AmlpxybGgWRqKdQ7W0HrGrFR2+JozSqgI6wXSF9MiZ3j9ZJb8bpYMOkvIkrKYg9kux1zuIoBb082ei8YygjcZu/4t8sau7SLXtqMAQRB44yBKAjy+9WVAhiNgcum92WMwr3Aega9/TOVeGSX18ycT4q42ZjxWkJBtD2WeAtIYJJoEswKG1gqnMRYZXzcWDjj+nLLWsKSpkPEstfhrQf+TO3q2WpeAzI9A5WseQ1O3ypzcY4FngpdElNwsreBWfakT7qvuqeaYpOztsI3xCEy6n6EvBje+nhioG+Mv4ARSgRe9UfLG2xPH2cpGx5Dgkom7y6WILpCic6EUXZVi1b7PuXZNLVfxDkesbm7GylX6Z8VXqynI0ymhVUvuv623spCoIFcUVpw0BE1my+zlsebfA001VuNkGcGsecJCcBqVQrVmYwGDlQwUrnCe03QR5jx7pvplmcZqtGDyYZSw7EVuqqbKCBMFZCQVg0cP0n6vzU+YU1WAP2QY+fJ2aBXr4o7homjLIOUR/lsqJFVRTA6hLqF+hXCaiw9EddDAVU0zwu90RdAV8FCPtlACAfXc6d/h4Dp7TkUJigMUoGjsBo6cU65HAgLBBAAhPHHszpzqcEnjGmhcA4VrYIC9OgMzzHTVtT3sOOqpJscJ/Dav7G8w2HSsS0y2vlFwqJ2zpPOr8F+yqAgrOpvc9OZvoouKSi23LiuEW9t1XXtCfHfcCCGOAZJkHCEHUK8QWsr3gDMcl8SDhS5Vl9sfG+s7s9+ZrcnT84HebOS5EflOkNxgTPwbz/Him1vPn9w4aOJPYuzY9u1kVL+53R4KwR7MgGRpXJytCEiQ55NjR9gIeo6w+3ropLQ78Xftnw7D1IeZKzzIvoviJ4ri4KAbZhKIan5HJjgRGtwe9WvzebSPCfaQ7R+hvRN0aD/XxyC+f04fdCC+Pplz7nfuFcqivXTUdd9vT989LoIk491PeWNorkSnb1rf2AydtZnzw3eehoq995zauyd2WdJr1HqNkKzDU/fOzjLD4ZaI5w+G3T97fPeUeJvbEkocPz46G8buidlweEt6BfTvvSZ5Vzgffspn8weV1P91G74rTJZlCXHJLqynJPJ9ecg8oqfA2T1iysoPxBIGScZkSdVTB9UxtKZgLYN3xfPYsRvx+BcUj+vsioes0i64PiHNWvcVCOr8c2gyA8zJ8oECUy3WffnV/hj3RbG8it1UmtBCQpgr28f6fw3KsZYZUtI1vWT8HwW+tW3/B3kxnAm1GAAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">09131c2c83f87210c31199c0deaad3e9</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id>3022f437-8f85-4a65-9022-789087170552</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>7b7fa4ec837c7210c31199c0deaad33c</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:15</sys_updated_on>
+        <ui_id>57661467-b5ed-46a5-94c4-96df4c0fb7b8</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f300246c833c7210c31199c0deaad302</block>
+        <comment>For each para percorrer o look up e server como o trigger da integração, para dar update na temperature</comment>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>7f7fa4ec837c7210c31199c0deaad33a</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:15</sys_updated_on>
+        <ui_id>59c39c13-96ae-470c-850a-3e5bd1088db4</ui_id>
+        <values>H4sIAAAAAAAA/51TXW+jMBD8L34miI80IXmrWlWq1LtKadWXUxUt9pJYZ2zONkk5xH+/dSC06uM9wY53Z2cG0zPT+qb17tXcOicPmm1/vUdM6oDRe8801Mi2THqsHYvYCVQb6r5PVwVUJZYLzG7yxbLixaIoMV1gvizEZr0u1+sq3iE3VrhhoFEhXaOge/t/Bn6USlicRDZgSZtHy7b9tyMpaEG6EdUmTTY8z1Z5liRZsUzLVV6mmcgBxYoIFZSoqPVxcvfNrO+aUNpRwgQ8TTO7GaVHEJElEcMPj1ogra9AOYxYDVqAN7ZjW29bAiyCeNaqmzuOUnuiY6H3w8m/tDFNktBYIRniOB7O5X7KcYSre/DwQtTct3Zq5UcjOboxCoEVtMrffcXGhufGS6PHEQ+luk4b1db655gEmwmun42Q1pEIbILRIH3yUb0czXl3Vfkg9SWU6VAZDmquwHsry9YHPT1DhTUR7WtoGqkP+8aak7wMk5Y6Pigq4kqZMy0NVzQGHoTHlCvED4TfX+A3sDK4+EE0NDxEzHXuToFzn14oxP2fNigZnU0e9mMMYYRb2fhbWnDCSe7wHm79yD1nyqUjCa8Be7z+K+Ggoxsk+VfobOzvIP4TG/4Bzj4jFXUDAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">8df39c6c83f87210c31199c0deaad3a5</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Do the following until">eaeb040687210300e6c2c88fc0e3ec89</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <parent_ui_id>59c39c13-96ae-470c-850a-3e5bd1088db4</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>b37fa4ec837c7210c31199c0deaad33d</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:15</sys_updated_on>
+        <ui_id>4c8a9d72-bbdc-48db-b593-8847e337951e</ui_id>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0bPxjhx05S8lZRCoVugKd3D1hlFkhMxWfL0kdQz/u+7suwkpC1bWaEvy1N07te5J/eQBilnK2fNvbo0hq8lmn19jBGXHoPvDZK4ZGiGiJKUW65k3gEx2mLhfODLhgsW3UjL1hr7hGjpCGHGRNxEVjsWKR0RpzWTFt519M2laUaiDHpQbiqB64d3aEWglkIg8K+wBpaWaTRrTkKcwqQVxWOySs+mWZqNsjQ9H43JeJoV8DnH00kKDQVeMQGp82Hx6LZD4lcVsXXlcWM1l+v+fdt3WQ6g0tSzGqVpjNiTZZIyIFRgYViMSiwptkrXe0QzTBdSHIANlxb6IZ/8ZPgvmDieTHxiwWBHwkJw/8x7jQNcXGGLgYsj1uk+lWwUB5GDOpQV2Ak7P8ZCwqLyu4YSi1diqFbClfJzkATtGww/KSDOAAlW+U099X6PYrlRu7uB5TWXnSx9UCiCxf6FLYi3ctbzaRATrIRGeYmrCiTNK622vCsGLmWyFvBICqF2MNQfdIKJJ56AsDi5Bvyqgx+w5n6LT9AGitsYmdrMBTbmsAuImP90nknYrN8hDzL4EqJ5ZS9hwJb1dNv4uWWO3NI0HbVtPz3hh2PPTTj2tu3OmvqD/764O63o7z+H+x8yT1M0g2BOlJO2bZ/b7EM4vM2fdDrKLorX/HlBXvLnC858oynHfzKll+MvPZn6Xv9N+U+mhGMwefBYv1s3/B3N+uidGWbutSbcALV7j90Mf4M+UMN1cXIM7ZT+4Zc6YO1vjEX2BVAHAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">02c69460833c7210c31199c0deaad30f</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>10</order>
+        <outputs_assigned/>
+        <parent_ui_id>4c8a9d72-bbdc-48db-b593-8847e337951e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>bb7fa4ec837c7210c31199c0deaad33e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:15</sys_updated_on>
+        <ui_id>3ab5b356-d932-4863-b6fd-1e619dd9f875</ui_id>
+        <values>H4sIAAAAAAAA/+1VXW/aMBT9K52fQxQSAoWXqaJCqtSt0lr1ZausG8cBa8bObAfKEP9913H40Mo+qvVxb/jc63vPOfERW6IbVzfOPugra8Vckcnnp4gI5TH8vSUKlpxMCNOqFE5oRVsgIiuQjS/cKMfnBnzpYgZCNoa/x3IpbC1h8/j7LrYQsjS821qDwdmOGzLZ/lQSJQ6pEqj6Y9ZnWTrM0iRJLwf9YpgV/bTMgEOGAyUUXGLrdE/34rZFol/qcJva49YZoebd+babcr8HtSk9q34SEf7suCo58qlAWh6RJagSnDabA2I4lHdKHoGFUA7HEd/8bMV3XJjmuW+sOEpkPBQPR9q5F+DqGhwglYY5tC1gbKEF4zaYU/IKGummp1houKu91HDFQSH3t7VslupjcIQcBuw/FiKNRRK89ko99U5Hdb/Q6097ljOhWle6otQM5OEEDr0rGuf5bAmXfImD6BLqGh2ltdEr0V5GLst4LvEQV1Kvcal/hTEwTzxGYyGeIX7dwo9ghFfxAcfg5UCzACsYbV8sjkObONlFxG7sVIK1R5HoLv3WeIpBcieOBn/8FWZE7a5w84p3OnbRywCcvP3tdjTOR2mV8x4Uw0FvkKfD3mU2Yr2CJemouhyzYjyOKQ1yqHXgGktpzHTJd7t3X5okycrkZVzebvDrEjaGvMr7SX4+YYPhuYSdydYrY5X+IVb+m/5lqpIk+R+rf46VsDSEodPWLn/DVD35CIWdB6+ZsEjtwWM3+38fX9jg4xLsFFpr89WLOmK7H4aSn5nHBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">42c69460833c7210c31199c0deaad310</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</flow>
+        <flow_variables_assigned>current_try,integration_success,integration_erro_message</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>11</order>
+        <outputs_assigned/>
+        <parent_ui_id>3ab5b356-d932-4863-b6fd-1e619dd9f875</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>f37fa4ec837c7210c31199c0deaad33f</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:15</sys_updated_on>
+        <ui_id>c20397ab-ab43-46f8-b766-ced01bb1bd08</ui_id>
+        <values>H4sIAAAAAAAA/+1YXW/TMBT9K1VeaUrSfDXjCW1MmgRMYmUvCEXXH+ks3CTYzrZS9b9znaRpt8GmoYIQ5K0+tq/PPfce5aprp6xNVRs9L19rLRaFc/Tp89gRhcXw99oRzDlynLFTwJLjL1orxQuTGbVC8Bpkzdt9JnQlYXW5Q+iVkAwPtyErUBjBcOUcre9tNU8QAJJSHs6CgCZT36OB76cp9RgHYEEYY0AJhEs8etxyGM0bDj8kZlaVBUVh+AKfbIG33f2zHi0Vs4S8scNvDS8YRyY5SM3HzhIKBqbEaFtEcWDnhdwBVxi+TXUJt1p8wxdDz57LOVKhnQz9MuskauH8BAxcGFVTU6tesVJQrltVGM+hluZ4H2sPnFdGlEV7xQCR29ulrJfF+1YOpw+wV5FaIwle2UQt8y6N/OKqvPmwZXkqikaTblOWFGS/AmOUILWxfNZOLeb3ZW6hh0JzyZe2OkuoKlEsskqV16J5B2kvJwuJi0kuyxvkZ9twAtTmOMESwOQU8ZMGvgQlbMLvMEz33sdCfK35mW0hPyR+MJ0yl7HQd8OERi5wP3ITRmYhSWI+m3JnM3b0Sh9L0HonFdYo+1rbRFvhOomyVmV7hSpRmddI6hqvYNX4Fmvaea/3cPnYYXwK612McpY1uTU5X4Oa7MUYvRj5r5zNZjN+YL9GaQVWm0zXFBtD79nQe+jDpnDPNmP+qBmDYM+MZztGo4ue0aN0O3OSspQcinvmnKNcL0871v+TP7eV6uCTH9fxd1l4V4y7Fr5Tjj/i4oDMSJyGiZuEwNwwzmMXIAjd2KcQpX6YeEl8EBc3gjzhMa5UmS2xbWHB94y2XidplEzziLtA4tANo2nszoKEuoR60ySfpZSk6STLWgEybcDUOssmXajN5qFTDxLzmd9c/ug3N/2Jzd+gKKN3vShPy9YZXmPnFYt7fr/Yggf3+szz/l63/0Yr9zLfdXIv9B9xcTQN8jT0mEtDwtHFHnFT7DEXohhYGrEAYnJAF3+23mz5DGPrP/VZHMbWYWwdxta/15/D2DqMrcPYOoytw9j6a2Mr41Ro5Dm3pM62/7vajRV2qKD70E2pvtgMd9jmO9h8myHBFQAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">49131c2c83f87210c31199c0deaad3e8</block>
+        <comment>Daqui em diante segue o mesmo fluxo da integração, mudando o update record quando for sucesso para alterar apenas a temperatura</comment>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id>59c39c13-96ae-470c-850a-3e5bd1088db4</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>fb7fa4ec837c7210c31199c0deaad33b</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:15</sys_updated_on>
+        <ui_id>3022f437-8f85-4a65-9022-789087170552</ui_id>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0HPxvijCWteRkkpBLoV1tKXrZhrWU7EZMmT5KSZyX/flSUnYc1oy/a4t+jcr3Ou7yE9UZ1tO2se1JUxfCXJ/OtTRLh0GP7uiYSGkTmhSlbcciWLAYjIBkTnAktp2UqDC024mSwlUMs37COmVNy0AnaPr2fSNReVZmF6CxpnWKbJvP8txCtsVCdQp5c0pXk2y7MkyT5cpOUsL9OsyoFBjg0FlExg6mKkPbkdkOiPeuyudbixmstVeN+GLvcjqHTlWKVJRNizZbJiyKcGYVhEGpAVWKV3B0QzqO6kOAJrLi22Iy752fCfODCbTl1izVAiZT54eBZhgx6ur8ECUumo7XRIpWvFKTN+ORWroRN2cYr5hLvWSfUlFkoxVivRNfKz3wg5NBg/GCKdQRKsdUod9aCjvl+r7ZeR5Q2Xw1ZCUCgK4vACi7srO+v49IQJ1mCjooG2xY0WrVYbPhQjlyZeCXzEtVBbHOquMXYnomSMi4X4BvHrAX4EzZ2KT9gGiz3NEgynxXC52A7XxMg+ImZnFgKMOYrE7RY/OkfRSw7iCr8fV0I1b+3VcJxBxz56aYQTD/T9wHkTaMX+sPf7b12S5NXQ4aUd3lb0PmdcwrSepsn0vDMuZuecccYT77RD9ood3Ld4oxuSJPlvh7+2AzeFP+KgzR/Tv3PDkzt9P/Owa8oNUntw2HL893CBHR4Xp6fQVunvTtQR2/8Ck/Z1Z4cGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">cd131c2c83f87210c31199c0deaad3e6</block>
+        <comment>Componente da integração, variáveis</comment>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</flow>
+        <flow_variables_assigned>active,retry_count,retry_timeout,current_try</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>ff7fa4ec837c7210c31199c0deaad339</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:37:15</sys_updated_on>
+        <ui_id>12721817-61ce-47df-83c9-8c9ceb3d0e64</ui_id>
+        <values>H4sIAAAAAAAA/+2ZW0/bMBTHvwry0yY1XS5Om7AnBEJC2k2j42WgyLFPijU3zhwH6FC/+46b9MJV2jTQNvIWH9/+52//lBzlmujGVo2tJ3qvruW0JLtfzwZEli6Gz9dECrJLyICUbAb4xLiVF4DtC6YaFwjwWci6Umx+0oWsadwIfi6VMNAtWTGDK1gwZPf6VtdyizxkecqBJlHEx2Hg8ygI0pT7AhgTERW4oGI5KBy6t9JwW5OdV66da62AlV3gXTdrgqreHDJVu5HaCKfEHxC4slAKQAmF6xuQGSsFs9rM1xEDTHws1SZwLkvbujJjV7X8gZtS340rAJPi0Patm1nnTxsuDphlx+gRt43phvJzLTnUrR0CCtYou78dawd8rKzUZTvFslytZmvVzMoPrRlkvcDqOIou5y58cPOwVr1NjTqhcl645LpMi+Nzffl5lcihLJe2dZ1Kc6bWLWatkXljneRr0sjJ7cNoQ/ceByiY4bbZjFWVLKdZZfSFXG6Fyc2GU4WNYaH0JUp0t3TojlyXQzwoNjzE+MEyfMKMdLa8x2VwstvySym/N3DkblgKnAqWFx6Pqe9ROmZeEqdjL/BTxgOaRzT2yWJA6nm9r1hdbwzFk8y+Ny7X1t7Opaw9CzeFG1nZ7l62hiwGd9gxYM0847pBgzcA3eXn19kZPcZOWGyx89lp2NnvNNwrrKMI7zhMly5uU3S0jr4khJ6Qj43NN/nYGP0scPAiiinQyIuCOPdoEOZenvjcK4SfRyykPkvpH4HDvRxWMWfE9t3D5mOD3djGlDvTejgF+8lozMPOX52SqyxIohEdJxlXuhGZP9xa9ZQMdqLXb8li8SCSVs4A34PPCSWN7kA5Wat4QFwP5gsEM40RvxHEHgQ89WgaF17iJ+CNRQgp55FIR+IJwVzdvt9G8yE2u4WXdPr+Q3zyxhinGWc8/s0Z/Dqf7FE+R1t87rcqdiZLFfdK69l8gWziR2MQhaHwhKCBR8c89hgEMbKZJzQfjyAJ4Q9+UZ45Alo9fW32fzDS12Z9bdbXZv1rpq/N+tqsB/NfA7OvzfrarGfz72Tz+WszAVzWqHPiRB2t/qC5jjleS8m3Q5fafHMZbmKLnzKBzqaLGwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=a77fa4ec837c7210c31199c0deaad307"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=a77fa4ec837c7210c31199c0deaad307^sys_idNOT IN677fa4ec837c7210c31199c0deaad326,6f7fa4ec837c7210c31199c0deaad32c,737fa4ec837c7210c31199c0deaad332,e37fa4ec837c7210c31199c0deaad32a,e77fa4ec837c7210c31199c0deaad32f,fb7fa4ec837c7210c31199c0deaad334"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=9ec4dabf-c540-447a-8597-109ac14b3450</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>active</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Active</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</model>
+        <model_id>a77fa4ec837c7210c31199c0deaad307</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_a77fa4ec837c7210c31199c0deaad307</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>677fa4ec837c7210c31199c0deaad326</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 16:32:42</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=953a26e5-e1c9-495f-808e-7d2e9cc3d96d</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>retry_timeout</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Retry Timeout</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</model>
+        <model_id>a77fa4ec837c7210c31199c0deaad307</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_a77fa4ec837c7210c31199c0deaad307</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>6f7fa4ec837c7210c31199c0deaad32c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 16:32:42</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=523f940d-c4be-460b-9c72-a56ad95d3a6b</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>integration_erro_message</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Integration Erro Message</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</model>
+        <model_id>a77fa4ec837c7210c31199c0deaad307</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_a77fa4ec837c7210c31199c0deaad307</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>737fa4ec837c7210c31199c0deaad332</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 16:32:42</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=cf354e43-315b-412b-b80c-fd0b3a240a94</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>retry_count</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Retry Count</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</model>
+        <model_id>a77fa4ec837c7210c31199c0deaad307</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_a77fa4ec837c7210c31199c0deaad307</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>e37fa4ec837c7210c31199c0deaad32a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 16:32:42</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=14b1322d-dd41-47c5-ae15-7db84b76e82e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current_try</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Current Try</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</model>
+        <model_id>a77fa4ec837c7210c31199c0deaad307</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_a77fa4ec837c7210c31199c0deaad307</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>e77fa4ec837c7210c31199c0deaad32f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 16:32:42</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=3b8b6947-74ad-46f6-aa34-61ca59147076</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>integration_success</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Integration Success</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Daily Temperature Update CD Allocator">a77fa4ec837c7210c31199c0deaad307</model>
+        <model_id>a77fa4ec837c7210c31199c0deaad307</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_a77fa4ec837c7210c31199c0deaad307</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:42</sys_created_on>
+        <sys_id>fb7fa4ec837c7210c31199c0deaad334</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 16:32:42</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_a77fa4ec837c7210c31199c0deaad307"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_a77fa4ec837c7210c31199c0deaad307"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_a77fa4ec837c7210c31199c0deaad307"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_a77fa4ec837c7210c31199c0deaad307"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>baab9ce4833c7210c31199c0deaad328</sys_id>
+        <latest_snapshot>a77fa4ec837c7210c31199c0deaad307</latest_snapshot>
+        <compiler_build/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=baab9ce4833c7210c31199c0deaad328^sys_idNOT IN4c8fa4ec837c7210c31199c0deaad397"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan/>
+        <plan_id>baab9ce4833c7210c31199c0deaad328</plan_id>
+        <snapshot>a77fa4ec837c7210c31199c0deaad307</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 16:32:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4c8fa4ec837c7210c31199c0deaad397</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 16:32:43</sys_updated_on>
+        <trigger display_value="">0c8fa4ec837c7210c31199c0deaad394</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=baab9ce4833c7210c31199c0deaad328"/>
+</record_update>

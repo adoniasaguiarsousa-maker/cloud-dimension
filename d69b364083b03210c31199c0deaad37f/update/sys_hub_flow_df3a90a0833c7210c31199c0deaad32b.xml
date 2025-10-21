@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Full Branch Report to Manager</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>daily_temperature_update_allocator</internal_name>
+        <label_cache>[{"name":"eb70f3f3-3a32-4817-9f24-e281578573fc.Records","label":"1 - Look Up Records➛Branch Records","reference":"x_1836478_cloud_0_branch","reference_display":"Branch","type":"records","base_type":"records","usedInstances":{"9560df41-673e-46cd-91d2-4225f848d1a8":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"eb70f3f3-3a32-4817-9f24-e281578573fc.Table","label":"1 - Look Up Records➛Branch Table","reference":"x_1836478_cloud_0_branch","reference_display":"Branch Table","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9560df41-673e-46cd-91d2-4225f848d1a8.item.manager_name","label":"2 - For Each➛Allocation Record➛Manager name","reference":"sys_user","reference_display":"Manager name","type":"reference","base_type":"reference","parent_table_name":"x_1836478_cloud_0_allocation","column_name":"manager_name","usedInstances":{"3822d440-1099-46ec-86bc-cdf33bbb83bf":["conditions"]}},{"name":"9560df41-673e-46cd-91d2-4225f848d1a8.item.name","label":"2 - For Each➛Branch Record➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"x_1836478_cloud_0_branch","column_name":"name","usedInstances":{"5955dafe-38f5-41c0-bf7b-90d37593ed47":["ah_subject",null]}},{"name":"9560df41-673e-46cd-91d2-4225f848d1a8.item.branch_manager","label":"2 - For Each➛Branch Record➛Branch manager","reference":"sys_user","reference_display":"Branch manager","type":"reference","base_type":"reference","parent_table_name":"x_1836478_cloud_0_branch","column_name":"branch_manager","usedInstances":{"e2f77d6b-131d-4645-9cc9-4267a8664340":["conditions"],"5955dafe-38f5-41c0-bf7b-90d37593ed47":[null]}},{"name":"e2f77d6b-131d-4645-9cc9-4267a8664340.Records","label":"3 - Look Up Records➛Allocation Records","reference":"x_1836478_cloud_0_allocation","reference_display":"Allocation Records","type":"records","base_type":"records","usedInstances":{"fe3e44a9-65a0-4081-ba87-c1f9101b9347":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.approvedallocations","label":"Flow Variables➛approvedAllocations","reference":"","reference_display":"","type":"integer","base_type":"integer","usedInstances":{"2627f5d5-e9a4-4f98-b533-1ab4e3d17a6a":["condition"],"5955dafe-38f5-41c0-bf7b-90d37593ed47":[null]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"37e7b757-0298-4875-9a7c-6a03b430dd94"}},{"name":"flow_variable.totalallocations","label":"Flow Variables➛totalAllocations","reference":"","reference_display":"","type":"integer","base_type":"integer","usedInstances":{"2627f5d5-e9a4-4f98-b533-1ab4e3d17a6a":["condition"],"5955dafe-38f5-41c0-bf7b-90d37593ed47":[null]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"fd1a4032-2fce-44bb-bc6c-80b8d937adcb"}},{"name":"9560df41-673e-46cd-91d2-4225f848d1a8.item.branch_manager.email","label":"2 - For Each➛Branch Record➛Branch manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"5955dafe-38f5-41c0-bf7b-90d37593ed47":["ah_to"]}},{"name":"9560df41-673e-46cd-91d2-4225f848d1a8.item.city","label":"2 - For Each➛Branch Record➛City","reference":"","reference_display":"City","type":"string","base_type":"string","parent_table_name":"x_1836478_cloud_0_branch","column_name":"city","usedInstances":{"5955dafe-38f5-41c0-bf7b-90d37593ed47":[null]}},{"name":"9560df41-673e-46cd-91d2-4225f848d1a8.item.state","label":"2 - For Each➛Branch Record➛State","reference":"","reference_display":"State","type":"string","base_type":"string","parent_table_name":"x_1836478_cloud_0_branch","column_name":"state","usedInstances":{"5955dafe-38f5-41c0-bf7b-90d37593ed47":[null]}},{"name":"flow_variable.colaborators","label":"Flow Variables➛Colaborators","type":"string","base_type":"string","usedInstances":{"5955dafe-38f5-41c0-bf7b-90d37593ed47":[null]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"30a45fcf-48c5-4373-9a8b-2dfc42ce63f5"}}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <master_snapshot_digest/>
+        <name>Full Branch Report</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 14:59:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>df3a90a0833c7210c31199c0deaad32b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Full Branch Report</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Cloud Dimension Allocator" source="x_1836478_cloud_0">d69b364083b03210c31199c0deaad37f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name>sys_hub_flow_df3a90a0833c7210c31199c0deaad32b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 19:56:01</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=df3a90a0833c7210c31199c0deaad32b"/>
+    <sys_variable_value action="delete_multiple" query="document_key=df3a90a0833c7210c31199c0deaad32b"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=df3a90a0833c7210c31199c0deaad32b"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=df3a90a0833c7210c31199c0deaad32b^sys_idNOT IN9f3a90a0833c7210c31199c0deaad32c"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>df3a90a0833c7210c31199c0deaad32b</id>
+        <name>Daily Temperature Update Allocator</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 14:59:50</sys_created_on>
+        <sys_id>9f3a90a0833c7210c31199c0deaad32c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 14:59:50</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=9f3a90a0833c7210c31199c0deaad32c"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=df3a90a0833c7210c31199c0deaad32b"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=df3a90a0833c7210c31199c0deaad32b"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=df3a90a0833c7210c31199c0deaad32b"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=df3a90a0833c7210c31199c0deaad32b^sys_idNOT INb90e9de48370b210c31199c0deaad38f"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Full Branch Report">df3a90a0833c7210c31199c0deaad32b</flow>
+        <name>Daily</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 19:56:01</sys_created_on>
+        <sys_id>b90e9de48370b210c31199c0deaad38f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 19:56:01</sys_updated_on>
+        <trigger_definition display_value="Daily">89142dc0c32222002841b63b12d3ae8a</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/21SXWvjMBD8K4eec0ZO2l7rt4MjcA9toSl5KcWspXUiWEuqLCf1hf73rmxduAs1ftmPmZ0Z++UkCBokUYln06FYCGMjBgv0PHrk7o6MxjrOsw6shujCKKoYBlwIFzQGUZVSLsQBaMDN2P/WDONlC10iyNBpymV590N+lyW/3+RdJSW/PFV7QzqgFdXL60J4CIyNifl0MYqsqr5UnA6uQF+hVlKtlvxIuby9KpubVVMu9QoQr3nvAva/vviF3X/d4XtEq5FPtUA9fpFFQNCPlsbzxp6jnKPo4L03fzBTBWyRDSmch+ey1qb3BOPcVntnFD76aJydOxEayhjlaOjsw+yAa40tDBS3OWTuDD3zoU+ak4osqd3s3fHp78G1sZPBPCSngM4VxBhMM0Ts01dAwo6J6g68N3ZX++AOZgKzlq6YYitackc+2pudLUAl4QVHBMWa+7+m9haCSS7umYbBH5P7+m1Id2cfWXE9m+aFHMraIOUfq1fB+PiTDxwwy/14/QTbWEk4yQIAAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>daily</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=df3a90a0833c7210c31199c0deaad32b^sys_idNOT IN0e0e9de48370b210c31199c0deaad3c2,820e9de48370b210c31199c0deaad3bd,ca0e9de48370b210c31199c0deaad3ad"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Full Branch Report">df3a90a0833c7210c31199c0deaad32b</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>2627f5d5-e9a4-4f98-b533-1ab4e3d17a6a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 19:56:01</sys_created_on>
+        <sys_id>0e0e9de48370b210c31199c0deaad3c2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 19:56:01</sys_updated_on>
+        <ui_id>5955dafe-38f5-41c0-bf7b-90d37593ed47</ui_id>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Full Branch Report">df3a90a0833c7210c31199c0deaad32b</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>9560df41-673e-46cd-91d2-4225f848d1a8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 19:56:01</sys_created_on>
+        <sys_id>820e9de48370b210c31199c0deaad3bd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 19:56:01</sys_updated_on>
+        <ui_id>e2f77d6b-131d-4645-9cc9-4267a8664340</ui_id>
+        <values>H4sIAAAAAAAA/9VXTU/jMBD9K1XObZQ0aRq4VbBIewAkirggZDmx01rrOtnE6QdV//uOYyctbYFSKhaOHs/Hm/F7jvO4tBixzq0w8R0Hu72w7zie5zhB4MXYjSIviCMn8iOrbQk8oeApccQpLKeYl2o9R27oBX4/RDFPS4IchDlPYyxZKsCNsCLjePFgvAebe/GYcZJTYZ0/PrWtDOdQQdLcOl9ubclFRhHHEeWQ4l4BaN0oNO2Dwb8I3m1GFaiXSOjUaU4UFqdt0bmkglAolWBe0LY1wYJgmeaLxpJTTG4FXxvGTEjIaCnnecGeIX3oKL+EQlsx1XvNEpk5aXM8TllMb7NqTpVFA9WbKS8n4kY3oCZME1xyWU8YLGUB+WimMCsQBlEyHKezu7rgFRNVe2ZTnQpvVljKnEWlpIU6C8rpBBKhCc4yJkYoy9Mpq4IBy8QecVjYCU9nULRgI2HjWAG3YUTYvgL7ZWV+wDlTXVxDGggGQIzDaSM99CIt82oqU+BRWVQbORaFzmWtqlmhv6VCqbs2/SE9InAo4pxlcgABU2paWbUP4nfPWVMiTgVhqmaxQXI4cDwCSMpnOLj+NRgul2e9wCGJ73aCvkc7fhCTzplLuh2/2+0loR8SF4c2k3RiR9BIPEYmyWq1K4uT5z9OWhebvR86t73B+4ZpRPbCZkTmnkxkAPc/yUzm5fdT2Xu60Q2/I564/yYJeuvzLtJcIj25DfXs8v1ohl4xysmLy/8AcHXwrSJbK1q8htcQNFE1tr4C3R//FfgkPROC9FyY4ExUH0tICGW+MW+dty+vsy0eVMe/Zm1lw0W8y17ckmnr+fhbtjrXmr8HgKwDh4Coda9R7gFe3691ekNd72TU9bofoy4Q53HZoG+mtmfA9VtLHV3t/6z88bY/kGgjwF09NdS/OK6m+9GaXVVzS5veh8S5ySy9c/kKwU78kvtiEbdVwTGEmnpIixXNGBlRua5ee5FUzjD/s2/fsKvRUNXep1+F/pvaC9y1zkADKKcFHNXms9CFx8bu9eDa2nzc7fBbSDqqhncoxDryGs9bdw3GvcDNFcGaGobT/gnfX1/xeasHv1c99fx/xG/QsRR++geP60Wgug8AAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Full Branch Report">df3a90a0833c7210c31199c0deaad32b</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 19:56:01</sys_created_on>
+        <sys_id>ca0e9de48370b210c31199c0deaad3ad</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 19:56:01</sys_updated_on>
+        <ui_id>eb70f3f3-3a32-4817-9f24-e281578573fc</ui_id>
+        <values>H4sIAAAAAAAA/9WXTU/jMBCG/0qVc1QlpJQut10Q0h4ACdBeWGQ5jtNa69hZx+kHiP++49hOSxuglIqFY8bz8c74sevePgQsC46DUT6IIhwfjo6iKEmiaDhMCI7TNBmSNEoHaRAGAhcUPDVOOYXPKea1+Z6jeJQMB0cjRLisMxShVGFBJuCSsarkePHLef7wdjJhPFNUBMe3d2FQYgWZNVXB8cPakl6UFHGcUg7hN6Zw78KoCLcW/SR4swlTwH8iYVNLlRktURjQuaYio1Aqx7yiYVBgkWEt1aK1KIqzS8GXhgkTGjIGxnlesXtIP4qMX06hLULtWvuJ3IysmUwkI/Sy1EwKa7FC7aLkdSEubANmujTHNdd+umCpK8hHS6PZiHCK8uuJnF35gmdMNO25RS4J5u0X1lqxtNa0MntBOS0gESpwWTIxRqWSU9YEg5aiP+bw0c+5nEHRio1FHxMjvA8jwv0zsJ825l9YMdPFOaSBYBDEOOw2skOvZK2aqUyBn7pqFoCTyuYKHptZob+1UWm7dv0hOyJwqIhipf4OAVPqWnkMt+L6MFoiQaTImKlZrcANe8iKukAEl5gwvfhdQ5os2mT7ecfdYD9ZVbNtJ53BXe057J/YHPbx3rAHuf8JfK3qz8f9ayTbhl/BmRy9CMHhcr8rqTSyk1vheRPcnQk9Y5RnT67jLcT54EsDWy9dPKfXAZqbGmv38sGXv5ffiWeeITsXJjgTzc8XJIQyn5jb6OXL69saB832L6ltbLgim/Tinpa9+91v2WZfPb9biPSB16Cod2NVdgj396tP79BN9oZucvA2dAGc24dWfTu1jgH714/ZOu9/b/zxuj9AtBIQP9616J/sVjN+a80DU3PtbCZvOpyrZNmV02cA2/Pb6oMPcWgKTiDU1UP2sKIZy8ZUL6t7r0zqGeZ/utYdXe0Zatp79ztt8OLZG8bLcwZnAClawVatPtRieGxsXg9x35p3ux1+Ck3HzfC2legjz/G8d9Vq7BTurgjW1nBMD/b4/vqInzc/+M7T4+f/Jf6Y7Irw3T8axNd0RA8AAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=df3a90a0833c7210c31199c0deaad32b"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=df3a90a0833c7210c31199c0deaad32b^sys_idNOT IN060e9de48370b210c31199c0deaad3be,0e0e9de48370b210c31199c0deaad3bd,ce0e9de48370b210c31199c0deaad3bb,ce0e9de48370b210c31199c0deaad3be"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">420e9de48370b210c31199c0deaad3be</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Full Branch Report">df3a90a0833c7210c31199c0deaad32b</flow>
+        <flow_variables_assigned>colaborators,totalallocations,approvedallocations</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>fe3e44a9-65a0-4081-ba87-c1f9101b9347</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 19:56:01</sys_created_on>
+        <sys_id>060e9de48370b210c31199c0deaad3be</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 19:56:01</sys_updated_on>
+        <ui_id>71cc544d-156b-4acb-b207-45df105f8d43</ui_id>
+        <values>H4sIAAAAAAAA/+WUMW/CMBCF/4rlCVQU0VKpEp0Y2VGXBlmHfSlWjW3ZlyAE+e91oKhQoFCYqmaILs+Xp3zP5yy5K8mXFEduEKN+s7z/Ou5wbRst1UuuFe9z3uEWZpgq6QxMXAByISa1AlPipkFOtVEBPx2iDNrTQJKu0jqFErca7y/3XdLzT908IJXBskIJBQRZYdxcVBCyXRN2x/Ky2314ynO7KZKyfUM8ClG4IBDkNNOEs8x5tKjEZPHM67ruHFCSIzBgjJNA2tkbSA+cLqT1ECIOLbUOsL87stWKddsJ9/4EDHgfXIXqKp4CTMR63PQHDRODv5wKpaM3sHj5j3NyG/tfmJzbCI/Zn4PURev0dkUCwvUG99Tmznrt3LJ0nQ3nyMfs5JNbTOdgz+oSh3WuKQeFUsckjJoTNNz+XJuFRYpay11p7sJ74/ml1R/xXCvmpgUAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">4a0e9de48370b210c31199c0deaad3bd</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Full Branch Report">df3a90a0833c7210c31199c0deaad32b</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id>9560df41-673e-46cd-91d2-4225f848d1a8</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 19:56:01</sys_created_on>
+        <sys_id>0e0e9de48370b210c31199c0deaad3bd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 19:56:01</sys_updated_on>
+        <ui_id>fe3e44a9-65a0-4081-ba87-c1f9101b9347</ui_id>
+        <values>H4sIAAAAAAAA/51TTW/bMAz9Lzonhr/m1LkVGAr0sBXoil6GwqAlOhEmS5okJ/UM//dRsZMNPQ07WXwkH98T5YmZIdgh+Bdz7708aLb//rZhUkeMzhOTgu1ZVouuztKaF3lV5Gma35VZWxVtlosCUFRswzT0SJUyYO8pPIEaYjxNmHe7najabVZkYltW5adtzXm9LfNqB3dVVRZlmjwjN074eaZWIb1VML7+PwM/SiUcrmYsONIW0LH99CEVRouNghYVDVoZqP9fPV87H1fTH+4gslPobrz0iSrydMPwPaAWSIM6UB43rActIBg3sn1wAwEOQTxpNd4qjlIHomOx9t3LX8SdpWks7JAccVySt7BZL3KB+dFIjk82SKMXJECr1h5u1NDrr4v8uALsYFDhugJCBk98aKPmqGKV1H07mvPzdeCD1Bd/a1IZDuoWQQhOtkNAH9eACnsianqwVupDY505yUszaemTg6Ig6ZQ509D4LBPgUXhCVwTJA+GfL/ArOBldfCEaap4v7pufQ5y7+FgVN4tpKvDcSRvuie6Eq7j5Lb7XhckvD0Mgl54GvkTs8fo3xMRIS5b8b+hs3I8o9Q82/wZ8RnapVwMAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">4e0e9de48370b210c31199c0deaad3ae</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Full Branch Report">df3a90a0833c7210c31199c0deaad32b</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 19:56:01</sys_created_on>
+        <sys_id>ce0e9de48370b210c31199c0deaad3bb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 19:56:01</sys_updated_on>
+        <ui_id>9560df41-673e-46cd-91d2-4225f848d1a8</ui_id>
+        <values>H4sIAAAAAAAA/51TTW/bMAz9Lzonhj/SfN0KDAV62Ap0RS9DYdASlQiTJU2Sk3qG//uo2EmHnoadLD6Sj++J8sBsF10Xw4u9D0EdDNv/eFswZRJG54Epwfas2Am5K/Idr8p1VeZ5uV0VzbpqilJUgGLNFsxAi1SpIraBwhPoLsXDgM0ml5WslhVU5XK1LTbLnSxXSyy3xd1me7epJM+ekVsvwjhSq1DBaehf/5+BH5UWHmczDjxpi+jZfviUir3DWkODmgbNDNT/r56vnY+z6U93kNgp9Dde+iQVZb5g+B7RCKRBEnTABWvBCIjW92wffUeARxBPRve3iqMykehYqn0P6jdxF3meCiWSI45T8hbW80VOMD9axfHJRWXNhERo9NzDre5a822Sn1aAEjodrysgpAvEhy5pTipmSfL70Z6frwMflLn4m5PactC3CGL0qukihrQG1NgSUd2Cc8ocauftSV2aSUubHTQFmdT2TEPTs8yAJ+EZXRFkD4R/ucCv4FVy8ZVoqHm8uK9/dWnu5GNWXE+mqSBwr1y8J7oTzuLGt/ReJ6YwPQyBXAUa+JKwx+vfkBI9LVnxv6Gz9T+T1A9s/AOGeCPtVwMAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">0e0e9de48370b210c31199c0deaad3be</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Full Branch Report">df3a90a0833c7210c31199c0deaad32b</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id>9560df41-673e-46cd-91d2-4225f848d1a8</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 19:56:01</sys_created_on>
+        <sys_id>ce0e9de48370b210c31199c0deaad3be</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 19:56:01</sys_updated_on>
+        <ui_id>2627f5d5-e9a4-4f98-b533-1ab4e3d17a6a</ui_id>
+        <values>H4sIAAAAAAAA/+1VTWsbMRD9K0HnZdmP2DS+FNMSKLQNNCGXNiyzktYW1UpbSWvHNf7vndkPx0lsakqOva3ejGbeG81jt8y2oWmDv7Nz79XCsNn3h4gpQxh+b5kSbMaqBKr0iqc8z6Z5liTZu8u0nOZlmokcJOQsYgZqiZncGqGCsqbogIitQLcUmGt9AU3j7EqK94gL5RsNm/sTYb5UWjg58GnAYbUgHZttX4TCppGFhlJqrHIbnDILvH4u6/Hih5H2xecOOa2H+iHux07WCaKVJhGTj0EaIbF1BdrLiNVgBATrNnvESRA3Rj8BS2UClmOU/OjVb6ydTSaUWEnUyGUf3B+LYW49zJdWcXnTEMEeCVDq4Q63uq3N114HTVxW0OowThyR1mM92RBpYjFQqm6Xdv1tbHitTCdwCGrLQe9PEHAMZRukp4eRWtZYqKjxIXE4Bb2m6i4jlzpeaDzElbZrbEq7FgMn4jHOCOJrxD928D04RSq+YBm83NMswStedHuJ5YJDCbtuLMWvlgj1AgcpRT8NTPDcqSbMsc9KDqx30bDUVzCpJmkyOb4el9MjS3Cwz9ttp2Q1kI3H5QVNI6Jkv9v9aJMkFy9Tgw2gn+W99sNbl38LP50xsFd+Oj7EEybK/mIievYzPZQkyX8THZpI+aI3w6Cta/7PHnogI/QdfL83QnLlkcgdYZ/G/wcFNrgAih9Ca+t+koQnbPcHh+UbDYkGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=df3a90a0833c7210c31199c0deaad32b^sys_idNOT IN0a0e9de48370b210c31199c0deaad3c6,0e0e9de48370b210c31199c0deaad3c5,460e9de48370b210c31199c0deaad3c6,4a0e9de48370b210c31199c0deaad3c5,4e0e9de48370b210c31199c0deaad3c4,820e9de48370b210c31199c0deaad3c6,860e9de48370b210c31199c0deaad3c5,ce0e9de48370b210c31199c0deaad3c5"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>df3a90a0833c7210c31199c0deaad32b</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{flow_variable.colaborators}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 19:56:01</sys_created_on>
+        <sys_id>0a0e9de48370b210c31199c0deaad3c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 19:56:01</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>0fa1f33b-9f31-4f6d-bbab-68c63520656d</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>df3a90a0833c7210c31199c0deaad32b</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{9560df41-673e-46cd-91d2-4225f848d1a8.item.city}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 19:56:01</sys_created_on>
+        <sys_id>0e0e9de48370b210c31199c0deaad3c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 19:56:01</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>41f2068f-1bf0-49c2-8b79-511af54f16b4</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>df3a90a0833c7210c31199c0deaad32b</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{flow_variable.approvedallocations}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 19:56:01</sys_created_on>
+        <sys_id>460e9de48370b210c31199c0deaad3c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 19:56:01</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>88145f36-0572-4915-8fa9-91ce2fcf6740</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>df3a90a0833c7210c31199c0deaad32b</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{9560df41-673e-46cd-91d2-4225f848d1a8.item.branch_manager}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 19:56:01</sys_created_on>
+        <sys_id>4a0e9de48370b210c31199c0deaad3c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 19:56:01</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>085439a9-5498-4fd5-927d-4bc56e82fc98</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>df3a90a0833c7210c31199c0deaad32b</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{9560df41-673e-46cd-91d2-4225f848d1a8.item.branch_manager}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 19:56:01</sys_created_on>
+        <sys_id>4e0e9de48370b210c31199c0deaad3c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 19:56:01</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>ce463edf-a998-4ee4-9b86-fa6472fdbdb9</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>df3a90a0833c7210c31199c0deaad32b</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{flow_variable.totalallocations}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 19:56:01</sys_created_on>
+        <sys_id>820e9de48370b210c31199c0deaad3c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 19:56:01</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>d68c1be9-2546-4b3c-b303-a29703c9425c</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>df3a90a0833c7210c31199c0deaad32b</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{9560df41-673e-46cd-91d2-4225f848d1a8.item.name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 19:56:01</sys_created_on>
+        <sys_id>860e9de48370b210c31199c0deaad3c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 19:56:01</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>23be6b2d-0393-4528-a90f-ec07a70b8278</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>df3a90a0833c7210c31199c0deaad32b</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{9560df41-673e-46cd-91d2-4225f848d1a8.item.state}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 19:56:01</sys_created_on>
+        <sys_id>ce0e9de48370b210c31199c0deaad3c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 19:56:01</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>433a8e0e-90bc-4094-83f4-f9ef37805aa7</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=df3a90a0833c7210c31199c0deaad32b^sys_idNOT IN4e0e9de48370b210c31199c0deaad3a7,750e9de48370b210c31199c0deaad391,c20e9de48370b210c31199c0deaad3a5"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=30a45fcf-48c5-4373-9a8b-2dfc42ce63f5</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>colaborators</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Colaborators</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Full Branch Report">df3a90a0833c7210c31199c0deaad32b</model>
+        <model_id>df3a90a0833c7210c31199c0deaad32b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_df3a90a0833c7210c31199c0deaad32b</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 19:56:01</sys_created_on>
+        <sys_id>4e0e9de48370b210c31199c0deaad3a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 19:56:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=fd1a4032-2fce-44bb-bc6c-80b8d937adcb</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>totalallocations</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>totalAllocations</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Full Branch Report">df3a90a0833c7210c31199c0deaad32b</model>
+        <model_id>df3a90a0833c7210c31199c0deaad32b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_df3a90a0833c7210c31199c0deaad32b</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 19:56:01</sys_created_on>
+        <sys_id>750e9de48370b210c31199c0deaad391</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 19:56:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=37e7b757-0298-4875-9a7c-6a03b430dd94</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>approvedallocations</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>approvedAllocations</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Full Branch Report">df3a90a0833c7210c31199c0deaad32b</model>
+        <model_id>df3a90a0833c7210c31199c0deaad32b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_df3a90a0833c7210c31199c0deaad32b</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 19:56:01</sys_created_on>
+        <sys_id>c20e9de48370b210c31199c0deaad3a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 19:56:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_df3a90a0833c7210c31199c0deaad32b"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_df3a90a0833c7210c31199c0deaad32b"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_df3a90a0833c7210c31199c0deaad32b"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_df3a90a0833c7210c31199c0deaad32b"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=df3a90a0833c7210c31199c0deaad32b"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=df3a90a0833c7210c31199c0deaad32b"/>
+</record_update>

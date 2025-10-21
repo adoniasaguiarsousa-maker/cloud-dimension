@@ -36,7 +36,9 @@
         <item_table/>
         <mandatory>false</mandatory>
         <message/>
-        <message_html><![CDATA[<p>Hi Opened by: ${opened_by}! I hope this message finds you well!<br><br>Your allocation atempt to ${base_name} as a ${job_name} was successfully done!<br><br>Soon the manager of the ${base_name} base will check your solicitation.<br><br></p>]]></message_html>
+        <message_html><![CDATA[<p>Hi ${opened_by}! I hope this message finds you well!<br><br>Your allocation atempt to ${base_name} as a ${job_name} was successfully done!<br><br>Soon ${manager_name}, the manager of the ${base_name} base, in the city of ${base_name.city} and state of ${base_name.state}, will check your solicitation.</p>
+<p>&nbsp;</p>
+<p>Base name: ${base_name}</p>]]></message_html>
         <message_list/>
         <message_text/>
         <name>Allocation Atempt Success</name>
@@ -58,7 +60,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>052a449083383210c31199c0deaad372</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Allocation Atempt Success</sys_name>
         <sys_overrides/>
         <sys_package display_value="Cloud Dimension Allocator" source="x_1836478_cloud_0">d69b364083b03210c31199c0deaad37f</sys_package>
@@ -66,7 +68,7 @@
         <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
         <sys_update_name>sysevent_email_action_052a449083383210c31199c0deaad372</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-20 19:11:57</sys_updated_on>
+        <sys_updated_on>2025-10-21 20:23:54</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Employee notification template">1462e7ca918a3010f877b1d70a4d6a3d</template>
         <type>email</type>
