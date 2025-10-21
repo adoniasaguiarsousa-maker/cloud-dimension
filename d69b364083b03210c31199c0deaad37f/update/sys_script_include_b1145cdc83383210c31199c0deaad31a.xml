@@ -10,8 +10,7 @@
         <name>AllocatorUtils</name>
         <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[var AllocatorUtils = Class.create();
-AllocatorUtils.prototype = {
-    initialize: function() {},
+AllocatorUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
     getAvailableBranches: function(current) {
         var available = [];
@@ -28,35 +27,40 @@ AllocatorUtils.prototype = {
     },
 
     canUserAllocate: function() {
+        // usuário atual (sys_id) e username (string)
         var userSysId = gs.getUserID();
+        var userName = gs.getUserName();
 
         var allocationGR = new GlideRecord('x_1836478_cloud_0_allocation');
-        allocationGR.addQuery('sys_created_by', userSysId);
-        allocationGR.addQuery('state', 3); 
+
+        // queremos apenas estados 2 (Awaiting for approval/payment) e 3 (Approved)
+        allocationGR.addQuery('state', 'IN', '2,3');
+
+        // criar condição: opened_by == userSysId OR sys_created_by == userName
+        var qc = allocationGR.addQuery('opened_by', userSysId);
+        qc.addOrCondition('sys_created_by', userName);
+
         allocationGR.query();
 
-        if (allocationGR.hasNext()) {
-            return false;
-        }
-
-        return true;
+        // se achou algum registro, não pode alocar (retorna 'false'), senão 'true'
+        return allocationGR.hasNext() ? 'false' : 'true';
     },
 
 
     type: 'AllocatorUtils'
-};]]></script>
+});]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-20 19:57:00</sys_created_on>
         <sys_id>b1145cdc83383210c31199c0deaad31a</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>AllocatorUtils</sys_name>
         <sys_package display_value="Cloud Dimension Allocator" source="x_1836478_cloud_0">d69b364083b03210c31199c0deaad37f</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
         <sys_update_name>sys_script_include_b1145cdc83383210c31199c0deaad31a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-20 20:41:21</sys_updated_on>
+        <sys_updated_on>2025-10-21 12:32:25</sys_updated_on>
     </sys_script_include>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>b1145cdc83383210c31199c0deaad31a</id>

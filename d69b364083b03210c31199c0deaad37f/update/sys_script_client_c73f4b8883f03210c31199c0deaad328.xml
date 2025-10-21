@@ -11,9 +11,10 @@
         <name>Branch slots including manager  </name>
         <order/>
         <script><![CDATA[function onSubmit() {
+	if (!g_form.isNewRecord()) return true;
     var manager = g_form.getValue('branch_manager');
-    var maxCapacity = parseInt(g_form.getValue('maximum_capacity'), 10); // Campo visível
-    var totalCapacity = parseInt(g_form.getValue('total_capacity'), 10); // Campo que apenas para controle pelo sistema
+    var maxCapacity = parseInt(g_form.getValue('maximum_capacity'), 10); 
+    var totalCapacity = parseInt(g_form.getValue('total_capacity'), 10); 
 
     // Preenchendo o campo de controle pra não ter que fazer isso no cadastro e ter um campo não solicitado no form
     if (isNaN(totalCapacity) || totalCapacity === 0) {
@@ -22,7 +23,7 @@
     }
 
     // Verificação pra subtrair apenas uma vez
-    if (totalCapacity - maxCapacity === 1) {
+    if (totalCapacity - maxCapacity >= 1) {
         return true;
     }
 
@@ -40,7 +41,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c73f4b8883f03210c31199c0deaad328</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Branch slots including manager  </sys_name>
         <sys_overrides/>
         <sys_package display_value="Cloud Dimension Allocator" source="x_1836478_cloud_0">d69b364083b03210c31199c0deaad37f</sys_package>
@@ -48,7 +49,7 @@
         <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
         <sys_update_name>sys_script_client_c73f4b8883f03210c31199c0deaad328</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-20 16:40:54</sys_updated_on>
+        <sys_updated_on>2025-10-21 13:02:26</sys_updated_on>
         <table>x_1836478_cloud_0_branch</table>
         <type>onSubmit</type>
         <ui_type>10</ui_type>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Header Host</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_1836478_cloud_0.rapidapi_host</name>
+        <read_roles/>
+        <suffix>rapidapi_host</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 13:29:43</sys_created_on>
+        <sys_id>de65c8a483b87210c31199c0deaad37f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1836478_cloud_0.rapidapi_host</sys_name>
+        <sys_package display_value="Cloud Dimension Allocator" source="x_1836478_cloud_0">d69b364083b03210c31199c0deaad37f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name>sys_properties_de65c8a483b87210c31199c0deaad37f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 13:29:43</sys_updated_on>
+        <type>string</type>
+        <value>yahoo-weather5.p.rapidapi.com</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=de65c8a483b87210c31199c0deaad37f"/>
+</record_update>
