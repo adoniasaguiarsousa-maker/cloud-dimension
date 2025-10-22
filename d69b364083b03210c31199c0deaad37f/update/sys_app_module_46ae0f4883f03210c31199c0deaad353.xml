@@ -21,24 +21,24 @@
  </query>
         <report/>
         <require_confirmation>true</require_confirmation>
-        <roles>x_1836478_cloud_0.cloud_admin,x_1836478_cloud_0.cloud_manager</roles>
+        <roles>x_1836478_cloud_0.cloud_manager</roles>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-20 14:51:37</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>46ae0f4883f03210c31199c0deaad353</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>Allocation list</sys_name>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>My Allocation list</sys_name>
         <sys_overrides/>
         <sys_package display_value="Cloud Dimension Allocator" source="x_1836478_cloud_0">d69b364083b03210c31199c0deaad37f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
         <sys_update_name>sys_app_module_46ae0f4883f03210c31199c0deaad353</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-21 20:01:20</sys_updated_on>
+        <sys_updated_on>2025-10-22 12:40:46</sys_updated_on>
         <timeline_page/>
-        <title>Allocation list</title>
+        <title>My Allocation list</title>
         <uncancelable>false</uncancelable>
         <view_name/>
         <window_name/>

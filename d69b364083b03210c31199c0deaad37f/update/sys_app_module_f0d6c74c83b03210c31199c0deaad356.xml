@@ -18,14 +18,14 @@
         <query/>
         <report/>
         <require_confirmation>true</require_confirmation>
-        <roles>x_1836478_cloud_0.cloud_manager</roles>
+        <roles>x_1836478_cloud_0.cloud_manager,x_1836478_cloud_0.cloud_admin</roles>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-20 14:16:55</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f0d6c74c83b03210c31199c0deaad356</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Colaborator Allocation </sys_name>
         <sys_overrides/>
         <sys_package display_value="Cloud Dimension Allocator" source="x_1836478_cloud_0">d69b364083b03210c31199c0deaad37f</sys_package>
@@ -33,7 +33,7 @@
         <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
         <sys_update_name>sys_app_module_f0d6c74c83b03210c31199c0deaad356</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-21 16:52:54</sys_updated_on>
+        <sys_updated_on>2025-10-22 12:33:49</sys_updated_on>
         <timeline_page/>
         <title>Colaborator Allocation </title>
         <uncancelable>false</uncancelable>

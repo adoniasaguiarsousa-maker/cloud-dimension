@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="972df6c083b03210c31199c0deaad3d8" extends="task" label="Allocation" max_length="40" name="x_1836478_cloud_0_allocation" type="collection">
-        <element label="Base name" max_length="32" name="base_name" reference="x_1836478_cloud_0_branch" type="reference"/>
+        <element label="Base name" max_length="32" name="base_name" reference="x_1836478_cloud_0_branch" reference_floats="true" type="reference"/>
         <element label="Manager name" max_length="32" name="manager_name" reference="sys_user" type="reference"/>
         <element label="Job name" max_length="32" name="job_name" reference="x_1836478_cloud_0_jobs" type="reference"/>
         <element label="Reproval reason" max_length="250" name="reproval_reason" type="string"/>
