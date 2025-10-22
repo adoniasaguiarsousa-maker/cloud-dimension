@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>description</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-22 17:33:29</sys_created_on>
+        <sys_id>33f60af883f4f210c31199c0deaad309</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>description</sys_name>
+        <sys_package display_value="Cloud Dimension Allocator" source="x_1836478_cloud_0">d69b364083b03210c31199c0deaad37f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cloud Dimension Allocator">d69b364083b03210c31199c0deaad37f</sys_scope>
+        <sys_update_name>sys_ui_policy_action_33f60af883f4f210c31199c0deaad309</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-22 17:33:29</sys_updated_on>
+        <table>x_1836478_cloud_0_jobs</table>
+        <ui_policy display_value="Mandatory fields">61d686f883f4f210c31199c0deaad33a</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=33f60af883f4f210c31199c0deaad309"/>
+</record_update>
