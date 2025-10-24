@@ -10,6 +10,7 @@
         <element label="Longitude" max_length="40" name="longitude" type="float"/>
         <element default="true" label="Integration Active" max_length="40" name="integration_active" type="boolean"/>
         <element label="State" max_length="100" name="state" type="string"/>
+        <element label="Integration Error Message" max_length="250" name="integration_error_message" type="string"/>
         <element choice="3" label="Integration Status" max_length="40" name="integration_status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Integration Success" sequence="1" value="2"/>
