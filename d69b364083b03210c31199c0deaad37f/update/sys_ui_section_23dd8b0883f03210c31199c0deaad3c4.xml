@@ -4,13 +4,13 @@
             <element>integration_active</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-20 14:47:42</sys_created_on>
-            <sys_id>3fddcb0883f03210c31199c0deaad35f</sys_id>
+            <sys_created_on>2025-10-24 18:17:21</sys_created_on>
+            <sys_id>3134e4e18378b610c31199c0deaad305</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Integration Properties" display_value="Integration Properties" name="x_1836478_cloud_0_branch" sys_domain="global" view="Default view">23dd8b0883f03210c31199c0deaad3c4</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-20 14:47:42</sys_updated_on>
+            <sys_updated_on>2025-10-24 18:17:21</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>.split</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-20 14:47:42</sys_created_on>
-            <sys_id>7bddcb0883f03210c31199c0deaad360</sys_id>
+            <sys_created_on>2025-10-24 18:17:21</sys_created_on>
+            <sys_id>7d34e4e18378b610c31199c0deaad305</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Integration Properties" display_value="Integration Properties" name="x_1836478_cloud_0_branch" sys_domain="global" view="Default view">23dd8b0883f03210c31199c0deaad3c4</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-20 14:47:42</sys_updated_on>
+            <sys_updated_on>2025-10-24 18:17:21</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -32,13 +32,41 @@
             <element>integration_status</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-20 14:47:42</sys_created_on>
-            <sys_id>73ddcb0883f03210c31199c0deaad361</sys_id>
+            <sys_created_on>2025-10-24 18:17:21</sys_created_on>
+            <sys_id>7534e4e18378b610c31199c0deaad306</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Integration Properties" display_value="Integration Properties" name="x_1836478_cloud_0_branch" sys_domain="global" view="Default view">23dd8b0883f03210c31199c0deaad3c4</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-20 14:47:42</sys_updated_on>
+            <sys_updated_on>2025-10-24 18:17:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-24 18:17:21</sys_created_on>
+            <sys_id>7d34e4e18378b610c31199c0deaad306</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Integration Properties" display_value="Integration Properties" name="x_1836478_cloud_0_branch" sys_domain="global" view="Default view">23dd8b0883f03210c31199c0deaad3c4</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-24 18:17:21</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>integration_error_message</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-24 18:17:21</sys_created_on>
+            <sys_id>7534e4e18378b610c31199c0deaad307</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Integration Properties" display_value="Integration Properties" name="x_1836478_cloud_0_branch" sys_domain="global" view="Default view">23dd8b0883f03210c31199c0deaad3c4</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-24 18:17:21</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
